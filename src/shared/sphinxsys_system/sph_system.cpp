@@ -8,15 +8,15 @@
 namespace SPH
 {
 //=================================================================================================//
-SPHSystem::SPHSystem(BoundingBox system_domain_bounds, Real resolution_ref, size_t number_of_threads)
+SPHSystem::SPHSystem(BoundingBox system_domain_bounds, Real resolution_ref, const std::string &workPath, size_t number_of_threads)
     : system_domain_bounds_(system_domain_bounds),
       resolution_ref_(resolution_ref),
       tbb_global_control_(tbb::global_control::max_allowed_parallelism, number_of_threads),
-      io_environment_(io_ptr_keeper_.createPtr<IOEnvironment>(*this)),
+      io_environment_(io_ptr_keeper_.createPtr<IOEnvironment>(*this, workPath)),
       run_particle_relaxation_(false), reload_particles_(false),
       restart_step_(0), generate_regression_data_(false), state_recording_(true)
 {
-    Log::init();
+    Log::init(*io_environment_);
     spdlog::set_level(static_cast<spdlog::level::level_enum>(log_level_));
     registerSystemVariable<Real>("PhysicalTime", 0.0);
     Log::get()->info("The reference resolution of the SPHSystem is {}.", resolution_ref_);

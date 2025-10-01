@@ -57,6 +57,7 @@ class Continuous
 };
 class Lattice;          // Indicating with lattice points
 class UnstructuredMesh; // Indicating with unstructured mesh
+class UnstructuredMesh2;
 class BaseMaterial;
 class SPHBody;
 class RealBody;

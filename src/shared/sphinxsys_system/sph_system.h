@@ -54,7 +54,7 @@ class SPHSystem
     UniquePtrsKeeper<Entity> unique_system_variable_ptrs_;
 
   public:
-    SPHSystem(BoundingBox system_domain_bounds, Real resolution_ref,
+    SPHSystem(BoundingBox system_domain_bounds, Real resolution_ref, const std::string &workPath, 
               size_t number_of_threads = std::thread::hardware_concurrency());
     virtual ~SPHSystem() {};
 

@@ -53,7 +53,7 @@ class IOEnvironment
     UniquePtrKeeper<ParameterizationIO> parameterization_io_ptr_keeper_;
 
   public:
-    explicit IOEnvironment(SPHSystem &sph_system);
+    explicit IOEnvironment(SPHSystem &sph_system, const std::string &workPath);
     virtual ~IOEnvironment() {};
     void resetForRestart();
     ParameterizationIO *defineParameterizationIO();

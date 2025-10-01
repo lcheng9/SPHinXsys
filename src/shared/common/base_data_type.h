@@ -44,7 +44,7 @@
 #include <CL/sycl.hpp>
 #define SYCL_DEVICE_ONLY
 #else
-#include <boost/atomic/atomic_ref.hpp>
+#include <D:/WelSimLLC/CodeDV/libPack/include/boost/atomic/atomic_ref.hpp>
 #endif // SPHINXSYS_USE_SYCL
 
 #include <Eigen/Cholesky>

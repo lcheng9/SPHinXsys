@@ -4,6 +4,12 @@
 
 #include "spdlog/sinks/rotating_file_sink.h"
 
+#ifdef _WIN32
+#define PATHSEP '\\'
+#else
+#define PATHSEP '/'
+#endif
+
 namespace SPH
 {
 namespace Log
@@ -11,14 +17,15 @@ namespace Log
 //=================================================================================================//
 std::shared_ptr<spdlog::logger> logger; // Global logger pointer
 //=================================================================================================//
-std::shared_ptr<spdlog::logger> init()
+std::shared_ptr<spdlog::logger> init(IOEnvironment &io_environment)
 {
     if (!logger) // Create a logger with a file sink
     {
         // Create a file rotating logger with 5 MB size max and 3 rotated files
         auto max_size = 1048576 * 5;
         auto max_files = 3;
-        logger = spdlog::rotating_logger_mt("sphinxsys_logger", "sphinxsys.log", max_size, max_files);
+        std::string sLogFile = io_environment.OutputFolder() + PATHSEP + "sphinxsys.log";
+        logger = spdlog::rotating_logger_mt("sphinxsys_logger", sLogFile, max_size, max_files);
         logger->flush_on(spdlog::level::info);                          // Flush logs on info level
         spdlog::set_default_logger(logger);                             // Set the default logger to the created logger
         spdlog::set_pattern("[%Y-%m-%d %H:%M:%S] [%l] [thread %t] %v"); // Set the log format

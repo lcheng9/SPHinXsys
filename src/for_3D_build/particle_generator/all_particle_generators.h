@@ -35,5 +35,6 @@
 #include "particle_generator_mesh.h"
 #include "particle_generator_network.h"
 #include "particle_generator_reserve.h"
+#include "particle_generator_mesh2.h"
 
 #endif // ALL_PARTICLE_GENERATORS_3D_H
