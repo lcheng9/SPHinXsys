@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\c771925d13becb6eb1e0f58c5f2a2ce6\RUN_TESTS_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{3DC1F78F-FC33-3926-8A01-49D0B89CDEF2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

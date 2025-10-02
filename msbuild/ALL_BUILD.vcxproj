@@ -1,0 +1,899 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5FF52419-10F4-36E7-AB11-7ACBAF6FC0FA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\WelSimLLC-github\SPHinXsys\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/WelSimLLC-github/SPHinXsys/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/WelSimLLC-github/SPHinXsys -BD:/WelSimLLC-github/SPHinXsys/msbuild --check-stamp-file D:/WelSimLLC-github/SPHinXsys/msbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;D:\WelSimLLC-github\SPHinXsys\cmake\Common.cmake;D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\4.1.0-rc3\CMakeCXXCompiler.cmake;D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\4.1.0-rc3\CMakeRCCompiler.cmake;D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\4.1.0-rc3\CMakeSystem.cmake;D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\cmake.verify_globs;D:\WelSimLLC-github\simbody\myInstall\cmake\SimbodyConfig.cmake;D:\WelSimLLC-github\simbody\myInstall\cmake\SimbodyConfigVersion.cmake;D:\WelSimLLC-github\simbody\myInstall\cmake\SimbodyTargets-debug.cmake;D:\WelSimLLC-github\simbody\myInstall\cmake\SimbodyTargets-release.cmake;D:\WelSimLLC-github\simbody\myInstall\cmake\SimbodyTargets.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\fmt\fmt-config-version.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\fmt\fmt-config.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\fmt\fmt-targets-debug.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\fmt\fmt-targets-release.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\fmt\fmt-targets.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\spdlog\spdlogConfig.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets-debug.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets-release.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigVersion.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\tbb\TBBConfig.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\tbb\TBBConfigVersion.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\tbb\TBBTargets-debug.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\tbb\TBBTargets-release.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\tbb\TBBTargets.cmake;D:\WelSimLLC\CodeDV\libPack\lib\eigen3\Eigen3Config.cmake;D:\WelSimLLC\CodeDV\libPack\lib\eigen3\Eigen3ConfigVersion.cmake;D:\WelSimLLC\CodeDV\libPack\lib\eigen3\Eigen3Targets.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/WelSimLLC-github/SPHinXsys/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/WelSimLLC-github/SPHinXsys -BD:/WelSimLLC-github/SPHinXsys/msbuild --check-stamp-file D:/WelSimLLC-github/SPHinXsys/msbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;D:\WelSimLLC-github\SPHinXsys\cmake\Common.cmake;D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\4.1.0-rc3\CMakeCXXCompiler.cmake;D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\4.1.0-rc3\CMakeRCCompiler.cmake;D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\4.1.0-rc3\CMakeSystem.cmake;D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\cmake.verify_globs;D:\WelSimLLC-github\simbody\myInstall\cmake\SimbodyConfig.cmake;D:\WelSimLLC-github\simbody\myInstall\cmake\SimbodyConfigVersion.cmake;D:\WelSimLLC-github\simbody\myInstall\cmake\SimbodyTargets-debug.cmake;D:\WelSimLLC-github\simbody\myInstall\cmake\SimbodyTargets-release.cmake;D:\WelSimLLC-github\simbody\myInstall\cmake\SimbodyTargets.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\fmt\fmt-config-version.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\fmt\fmt-config.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\fmt\fmt-targets-debug.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\fmt\fmt-targets-release.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\fmt\fmt-targets.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\spdlog\spdlogConfig.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets-debug.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets-release.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigVersion.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\tbb\TBBConfig.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\tbb\TBBConfigVersion.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\tbb\TBBTargets-debug.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\tbb\TBBTargets-release.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\tbb\TBBTargets.cmake;D:\WelSimLLC\CodeDV\libPack\lib\eigen3\Eigen3Config.cmake;D:\WelSimLLC\CodeDV\libPack\lib\eigen3\Eigen3ConfigVersion.cmake;D:\WelSimLLC\CodeDV\libPack\lib\eigen3\Eigen3Targets.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/WelSimLLC-github/SPHinXsys/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/WelSimLLC-github/SPHinXsys -BD:/WelSimLLC-github/SPHinXsys/msbuild --check-stamp-file D:/WelSimLLC-github/SPHinXsys/msbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;D:\WelSimLLC-github\SPHinXsys\cmake\Common.cmake;D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\4.1.0-rc3\CMakeCXXCompiler.cmake;D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\4.1.0-rc3\CMakeRCCompiler.cmake;D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\4.1.0-rc3\CMakeSystem.cmake;D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\cmake.verify_globs;D:\WelSimLLC-github\simbody\myInstall\cmake\SimbodyConfig.cmake;D:\WelSimLLC-github\simbody\myInstall\cmake\SimbodyConfigVersion.cmake;D:\WelSimLLC-github\simbody\myInstall\cmake\SimbodyTargets-debug.cmake;D:\WelSimLLC-github\simbody\myInstall\cmake\SimbodyTargets-release.cmake;D:\WelSimLLC-github\simbody\myInstall\cmake\SimbodyTargets.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\fmt\fmt-config-version.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\fmt\fmt-config.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\fmt\fmt-targets-debug.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\fmt\fmt-targets-release.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\fmt\fmt-targets.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\spdlog\spdlogConfig.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets-debug.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets-release.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigVersion.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\tbb\TBBConfig.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\tbb\TBBConfigVersion.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\tbb\TBBTargets-debug.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\tbb\TBBTargets-release.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\tbb\TBBTargets.cmake;D:\WelSimLLC\CodeDV\libPack\lib\eigen3\Eigen3Config.cmake;D:\WelSimLLC\CodeDV\libPack\lib\eigen3\Eigen3ConfigVersion.cmake;D:\WelSimLLC\CodeDV\libPack\lib\eigen3\Eigen3Targets.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/WelSimLLC-github/SPHinXsys/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/WelSimLLC-github/SPHinXsys -BD:/WelSimLLC-github/SPHinXsys/msbuild --check-stamp-file D:/WelSimLLC-github/SPHinXsys/msbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;D:\WelSimLLC-github\SPHinXsys\cmake\Common.cmake;D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\4.1.0-rc3\CMakeCXXCompiler.cmake;D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\4.1.0-rc3\CMakeRCCompiler.cmake;D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\4.1.0-rc3\CMakeSystem.cmake;D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\cmake.verify_globs;D:\WelSimLLC-github\simbody\myInstall\cmake\SimbodyConfig.cmake;D:\WelSimLLC-github\simbody\myInstall\cmake\SimbodyConfigVersion.cmake;D:\WelSimLLC-github\simbody\myInstall\cmake\SimbodyTargets-debug.cmake;D:\WelSimLLC-github\simbody\myInstall\cmake\SimbodyTargets-release.cmake;D:\WelSimLLC-github\simbody\myInstall\cmake\SimbodyTargets.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\fmt\fmt-config-version.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\fmt\fmt-config.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\fmt\fmt-targets-debug.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\fmt\fmt-targets-release.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\fmt\fmt-targets.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\spdlog\spdlogConfig.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets-debug.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets-release.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigTargets.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\spdlog\spdlogConfigVersion.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\tbb\TBBConfig.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\tbb\TBBConfigVersion.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\tbb\TBBTargets-debug.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\tbb\TBBTargets-release.cmake;D:\WelSimLLC-github\vcpkg\installed\x64-windows\share\tbb\TBBTargets.cmake;D:\WelSimLLC\CodeDV\libPack\lib\eigen3\Eigen3Config.cmake;D:\WelSimLLC\CodeDV\libPack\lib\eigen3\Eigen3ConfigVersion.cmake;D:\WelSimLLC\CodeDV\libPack\lib\eigen3\Eigen3Targets.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\ZERO_CHECK.vcxproj">
+      <Project>{C3205D24-6AB4-30D4-AA2A-CD1CD698988A}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\modules\bernoulli_beam_struct_sim\bernoulli_beam_struct_sim.vcxproj">
+      <Project>{50429B0C-47A6-33EB-AADC-F3422F6D6AAD}</Project>
+      <Name>bernoulli_beam_struct_sim</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\extra_source_and_tests\extra_src\extra_sources_2d.vcxproj">
+      <Project>{60A102D4-4BA6-3B79-95E0-355E7360A0DA}</Project>
+      <Name>extra_sources_2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\extra_source_and_tests\extra_src\extra_sources_3d.vcxproj">
+      <Project>{2CBC0ADE-FE33-3147-96CB-A6ECB37B264E}</Project>
+      <Name>extra_sources_3d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\modules\mass_spring_damper_response_struct_sim\mass_spring_damper_response_struct_sim.vcxproj">
+      <Project>{27B55731-3857-3684-BC42-BE78560E2130}</Project>
+      <Name>mass_spring_damper_response_struct_sim</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\src\sphinxsys_2d.vcxproj">
+      <Project>{70305D14-FF3F-37D1-AE9D-B7E084C8555D}</Project>
+      <Name>sphinxsys_2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\src\sphinxsys_3d.vcxproj">
+      <Project>{00943E16-B2BF-3829-ACE2-06034F8E167D}</Project>
+      <Name>sphinxsys_3d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\modules\structural_simulation\structural_simulation_module.vcxproj">
+      <Project>{73BC10A5-8F1D-396E-A353-19D61419A39A}</Project>
+      <Name>structural_simulation_module</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_0d_regression_test\test_0d_regression_test.vcxproj">
+      <Project>{068BF799-0F6F-350A-9E8F-DEAA7A2BFC23}</Project>
+      <Name>test_0d_regression_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\2d_examples_ck\test_0d_regression_test_ck\test_0d_regression_test_ck.vcxproj">
+      <Project>{D1493821-E926-3D6D-941D-6D337EC3CDFE}</Project>
+      <Name>test_0d_regression_test_ck</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\tests_sycl\2d_examples\test_0d_regression_test_sycl\test_0d_regression_test_sycl.vcxproj">
+      <Project>{BB64577E-A831-3CD6-AA57-DCFD2097C33E}</Project>
+      <Name>test_0d_regression_test_sycl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_1d_shock_tube\test_1d_shock_tube.vcxproj">
+      <Project>{BD1EF09C-3A26-3EF2-B890-CF712F3E4042}</Project>
+      <Name>test_1d_shock_tube</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_FVM_double_mach_reflection\test_2d_FVM_double_mach_reflection.vcxproj">
+      <Project>{D8D879A1-89A4-35CC-934C-14412422B560}</Project>
+      <Name>test_2d_FVM_double_mach_reflection</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_FVM_flow_around_cylinder\test_2d_FVM_flow_around_cylinder.vcxproj">
+      <Project>{7C49816D-3038-3BEC-979E-21318B77BE20}</Project>
+      <Name>test_2d_FVM_flow_around_cylinder</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\extra_source_and_tests\test_2d_FVM_turbulent_channelflow\test_2d_FVM_turbulent_channelflow.vcxproj">
+      <Project>{1FEBB2A9-C70A-349C-A5B4-0490DC95F196}</Project>
+      <Name>test_2d_FVM_turbulent_channelflow</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\extra_source_and_tests\test_2d_T_pipe_VIPO_shell\test_2d_T_pipe_VIPO_shell.vcxproj">
+      <Project>{2E17D47A-0296-30DB-B9EB-BB0F687F6FE0}</Project>
+      <Name>test_2d_T_pipe_VIPO_shell</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_T_shaped_pipe\test_2d_T_shaped_pipe.vcxproj">
+      <Project>{18CC2493-C6C3-3D78-8472-323B63BB3325}</Project>
+      <Name>test_2d_T_shaped_pipe</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\optimization\test_2d_VP_heat_flux_optimization\test_2d_VP_heat_flux_optimization.vcxproj">
+      <Project>{9AE3AB0F-0906-312B-89D4-E62C64612915}</Project>
+      <Name>test_2d_VP_heat_flux_optimization</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\optimization\test_2d_VP_heat_flux_steady\test_2d_VP_heat_flux_steady.vcxproj">
+      <Project>{0C4E408F-AE4E-33C6-9180-FE5473BB877A}</Project>
+      <Name>test_2d_VP_heat_flux_steady</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\optimization\test_2d_VP_same_sink_optimization\test_2d_VP_same_sink_optimization.vcxproj">
+      <Project>{EA01EEE2-A78E-30CC-A979-62A6F19843FE}</Project>
+      <Name>test_2d_VP_same_sink_optimization</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\optimization\test_2d_VP_same_sink_steady\test_2d_VP_same_sink_steady.vcxproj">
+      <Project>{A693C951-99B0-35F1-BE0D-333C0ADBB345}</Project>
+      <Name>test_2d_VP_same_sink_steady</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_airfoil\test_2d_airfoil.vcxproj">
+      <Project>{3A436873-4948-3EA5-9C76-98524C9E126B}</Project>
+      <Name>test_2d_airfoil</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_anisotropic_beam\test_2d_anisotropic_beam.vcxproj">
+      <Project>{4675CB7F-48AE-315C-8143-5F8281A379E7}</Project>
+      <Name>test_2d_anisotropic_beam</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_ball_shell_collision\test_2d_ball_shell_collision.vcxproj">
+      <Project>{27810EC4-5055-3D54-93F3-7A9889341D91}</Project>
+      <Name>test_2d_ball_shell_collision</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_channel_flow_fluid_shell\test_2d_channel_flow_fluid_shell.vcxproj">
+      <Project>{627C1D78-2E77-3642-B7D2-72F90D15D025}</Project>
+      <Name>test_2d_channel_flow_fluid_shell</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_cohesive_soil_failure\test_2d_cohesive_soil_failure.vcxproj">
+      <Project>{1509CA57-45E9-38A5-BB51-3B177AEFFE14}</Project>
+      <Name>test_2d_cohesive_soil_failure</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_collision\test_2d_collision.vcxproj">
+      <Project>{6F89C4C9-BBAD-3BB1-8CE3-FF28751C274E}</Project>
+      <Name>test_2d_collision</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_column_collapse\test_2d_column_collapse.vcxproj">
+      <Project>{4B701B95-0837-35E7-BA0D-865E68D15151}</Project>
+      <Name>test_2d_column_collapse</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\2d_examples_ck\test_2d_column_collapse_ck\test_2d_column_collapse_ck.vcxproj">
+      <Project>{A152A0B5-8682-3504-9590-830E0922A710}</Project>
+      <Name>test_2d_column_collapse_ck</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\tests_sycl\2d_examples\test_2d_column_collapse_sycl\test_2d_column_collapse_sycl.vcxproj">
+      <Project>{B3BFFD29-DEFE-3D8E-8D35-D5004602EF14}</Project>
+      <Name>test_2d_column_collapse_sycl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_dambreak\test_2d_dambreak.vcxproj">
+      <Project>{84D8E719-4965-3FBD-8AD7-A1014B3FAA58}</Project>
+      <Name>test_2d_dambreak</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\2d_examples_ck\test_2d_dambreak_ck\test_2d_dambreak_ck.vcxproj">
+      <Project>{59F07459-FEAA-3A07-97CA-BFACB05FC2FE}</Project>
+      <Name>test_2d_dambreak_ck</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\test_python_interface\test_2d_dambreak_python\test_2d_dambreak_python.vcxproj">
+      <Project>{C132F6C0-A9EC-3A4D-8401-AE4A46F245E9}</Project>
+      <Name>test_2d_dambreak_python</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\tests_sycl\2d_examples\test_2d_dambreak_sycl\test_2d_dambreak_sycl.vcxproj">
+      <Project>{F599042F-4938-3B60-B3D7-FFE1C16F4AE1}</Project>
+      <Name>test_2d_dambreak_sycl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_depolarization\test_2d_depolarization.vcxproj">
+      <Project>{D28A6F6F-6D44-37D7-827B-08F1602CF04C}</Project>
+      <Name>test_2d_depolarization</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_diffusion\test_2d_diffusion.vcxproj">
+      <Project>{D6473AA7-4BC1-38A2-89F2-7965DDA7FCDB}</Project>
+      <Name>test_2d_diffusion</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_diffusion_NeumannBC\test_2d_diffusion_NeumannBC.vcxproj">
+      <Project>{B4899465-3C46-388D-9A2A-51C9BC5D6FD2}</Project>
+      <Name>test_2d_diffusion_NeumannBC</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\2d_examples_ck\test_2d_diffusion_NeumannBC_ck\test_2d_diffusion_NeumannBC_ck.vcxproj">
+      <Project>{2919BBC6-312C-39A0-8AFC-237D399FAB84}</Project>
+      <Name>test_2d_diffusion_NeumannBC_ck</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\tests_sycl\2d_examples\test_2d_diffusion_NeumannBC_sycl\test_2d_diffusion_NeumannBC_sycl.vcxproj">
+      <Project>{2C7F4B95-4C5A-33CB-82F8-8872C3FD196D}</Project>
+      <Name>test_2d_diffusion_NeumannBC_sycl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_diffusion_RobinBC\test_2d_diffusion_RobinBC.vcxproj">
+      <Project>{237E043A-A84E-39A1-B2FE-2504FB48F622}</Project>
+      <Name>test_2d_diffusion_RobinBC</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_droplet_impact\test_2d_droplet_impact.vcxproj">
+      <Project>{97E8555A-9C29-386D-9A8C-6680D37155FB}</Project>
+      <Name>test_2d_droplet_impact</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_elastic_gate\test_2d_elastic_gate.vcxproj">
+      <Project>{B886C9AB-7332-3978-B124-31285EB0C0E8}</Project>
+      <Name>test_2d_elastic_gate</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_eulerian_flow_around_cylinder_LG\test_2d_eulerian_flow_around_cylinder_LG.vcxproj">
+      <Project>{A1B8DE03-C6CD-3537-80E8-F994CDF71C63}</Project>
+      <Name>test_2d_eulerian_flow_around_cylinder_LG</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\tests_sycl\2d_examples\test_2d_eulerian_flow_around_cylinder_sycl\test_2d_eulerian_flow_around_cylinder_sycl.vcxproj">
+      <Project>{DCE3DB2D-10BD-3A5F-9C89-3E32F81CCF34}</Project>
+      <Name>test_2d_eulerian_flow_around_cylinder_sycl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_eulerian_supersonic_flow_new_BC\test_2d_eulerian_supersonic_flow_new_BC.vcxproj">
+      <Project>{ADA34C81-0F4A-3D96-9BB4-A7AF6DB84FBF}</Project>
+      <Name>test_2d_eulerian_supersonic_flow_new_BC</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_eulerian_taylor_green_LG\test_2d_eulerian_taylor_green_LG.vcxproj">
+      <Project>{A7FC2B1E-9E13-34CB-A6EA-D02506AB50E9}</Project>
+      <Name>test_2d_eulerian_taylor_green_LG</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_filling_tank\test_2d_filling_tank.vcxproj">
+      <Project>{EE0E74AB-8630-3D5A-AE22-A81AABB2A08D}</Project>
+      <Name>test_2d_filling_tank</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\2d_examples_ck\test_2d_filling_tank_ck\test_2d_filling_tank_ck.vcxproj">
+      <Project>{288BD34E-CCB7-3E5C-8DF1-CF0DF32E9E43}</Project>
+      <Name>test_2d_filling_tank_ck</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\tests_sycl\2d_examples\test_2d_filling_tank_sycl\test_2d_filling_tank_sycl.vcxproj">
+      <Project>{78AD181E-A215-3BF1-86A9-B08AFF5517C0}</Project>
+      <Name>test_2d_filling_tank_sycl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_flow_around_cylinder\test_2d_flow_around_cylinder.vcxproj">
+      <Project>{8038B1E4-B1B6-36F3-B6DE-34D84A51498F}</Project>
+      <Name>test_2d_flow_around_cylinder</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_flow_stream_around_fish\test_2d_flow_stream_around_fish.vcxproj">
+      <Project>{A0BF07F2-3E81-34D7-BAAB-F5C6732B83F6}</Project>
+      <Name>test_2d_flow_stream_around_fish</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_free_stream_around_cylinder\test_2d_free_stream_around_cylinder.vcxproj">
+      <Project>{A4593FB9-267A-3F70-A005-AFCB42E18FF4}</Project>
+      <Name>test_2d_free_stream_around_cylinder</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_free_stream_around_cylinder_mr\test_2d_free_stream_around_cylinder_mr.vcxproj">
+      <Project>{33BD10D4-1107-3965-BA88-771C4C4DA7CB}</Project>
+      <Name>test_2d_free_stream_around_cylinder_mr</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_fsi2\test_2d_fsi2.vcxproj">
+      <Project>{5F5C056F-BD4F-32E4-8484-7028283C00A2}</Project>
+      <Name>test_2d_fsi2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\unit_tests_src\for_2D_build\geometries\test_2d_geometric_shape\test_2d_geometric_shape.vcxproj">
+      <Project>{76D5FF9D-D76A-3229-B28A-25B521EEB0E5}</Project>
+      <Name>test_2d_geometric_shape</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_heat_transfer\test_2d_heat_transfer.vcxproj">
+      <Project>{41B59D43-6CEE-3B0D-ABA2-5D3A0BE62510}</Project>
+      <Name>test_2d_heat_transfer</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_hydrostatic_fluid_shell\test_2d_hydrostatic_fluid_shell.vcxproj">
+      <Project>{B27E9B36-CC43-38E0-A898-1B9E33B105B9}</Project>
+      <Name>test_2d_hydrostatic_fluid_shell</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_hydrostatic_fsi\test_2d_hydrostatic_fsi.vcxproj">
+      <Project>{C1634985-3116-32E0-8439-76A6C41589BC}</Project>
+      <Name>test_2d_hydrostatic_fsi</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_impact_patch\test_2d_impact_patch.vcxproj">
+      <Project>{01AEA7A9-A7CC-372C-B5D3-72B0D6A983F7}</Project>
+      <Name>test_2d_impact_patch</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_implicit_relaxation\test_2d_implicit_relaxation.vcxproj">
+      <Project>{1B96F2F3-BBE5-319C-9D4C-7B5C8DAD74C1}</Project>
+      <Name>test_2d_implicit_relaxation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_lid_driven_cavity_corrected\test_2d_lid_driven_cavity_corrected.vcxproj">
+      <Project>{8102E21A-6ECF-3CEF-8F3B-1E9B1B3E091C}</Project>
+      <Name>test_2d_lid_driven_cavity_corrected</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\2d_examples_ck\test_2d_lid_driven_cavity_corrected_ck\test_2d_lid_driven_cavity_corrected_ck.vcxproj">
+      <Project>{8595AE18-4842-3DD4-90BD-3E8A08DB8B48}</Project>
+      <Name>test_2d_lid_driven_cavity_corrected_ck</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\tests_sycl\2d_examples\test_2d_lid_driven_cavity_corrected_sycl\test_2d_lid_driven_cavity_corrected_sycl.vcxproj">
+      <Project>{3371D639-BEAA-3E32-A824-A6DF11D35D43}</Project>
+      <Name>test_2d_lid_driven_cavity_corrected_sycl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_lid_driven_cavity_non_newtonian\test_2d_lid_driven_cavity_non_newtonian.vcxproj">
+      <Project>{108E13A1-0968-3919-B5EA-4053097CD6EB}</Project>
+      <Name>test_2d_lid_driven_cavity_non_newtonian</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\extra_source_and_tests\test_2d_membrane\test_2d_membrane.vcxproj">
+      <Project>{F7D36037-8BE9-3CCD-B038-75B5AAE383C2}</Project>
+      <Name>test_2d_membrane</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\extra_source_and_tests\test_2d_mixed_poiseuille_flow\test_2d_mixed_poiseuille_flow.vcxproj">
+      <Project>{D51BAEE2-E841-3E8E-8CBB-F1F44E8963E7}</Project>
+      <Name>test_2d_mixed_poiseuille_flow</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\2d_examples_ck\test_2d_mixed_poiseuille_flow_ck\test_2d_mixed_poiseuille_flow_ck.vcxproj">
+      <Project>{F70D9DA2-C0C5-30CF-9CED-DD2435C0A149}</Project>
+      <Name>test_2d_mixed_poiseuille_flow_ck</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\tests_sycl\2d_examples\test_2d_mixed_poiseuille_flow_sycl\test_2d_mixed_poiseuille_flow_sycl.vcxproj">
+      <Project>{F85A5EB5-7700-347D-9D4C-A5F48097ECE3}</Project>
+      <Name>test_2d_mixed_poiseuille_flow_sycl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\extra_source_and_tests\test_2d_modified_T_flow\test_2d_modified_T_flow.vcxproj">
+      <Project>{427EBC36-D503-359E-8730-3724D75D5AD1}</Project>
+      <Name>test_2d_modified_T_flow</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_mr_cantilever_beam\test_2d_mr_cantilever_beam.vcxproj">
+      <Project>{7D3410C2-B4C6-3C02-90CA-FDCE0C0182EC}</Project>
+      <Name>test_2d_mr_cantilever_beam</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_nonlinear_wave_fsi\test_2d_nonlinear_wave_fsi.vcxproj">
+      <Project>{6F31B1DC-E73D-3B4C-8862-ADE4F7065F06}</Project>
+      <Name>test_2d_nonlinear_wave_fsi</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_oilcooling\test_2d_oilcooling.vcxproj">
+      <Project>{E78F3830-C5FA-399A-AFE3-5048AB14A132}</Project>
+      <Name>test_2d_oilcooling</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_oscillating_beam\test_2d_oscillating_beam.vcxproj">
+      <Project>{A8548319-EA6B-3362-B4F9-398484B9274B}</Project>
+      <Name>test_2d_oscillating_beam</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_oscillating_beam_UL\test_2d_oscillating_beam_UL.vcxproj">
+      <Project>{90AA38F9-6569-383A-8729-6FACD9F1B2B6}</Project>
+      <Name>test_2d_oscillating_beam_UL</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_oscillating_beam_cauchy\test_2d_oscillating_beam_cauchy.vcxproj">
+      <Project>{08510985-DDDE-3A9B-9401-48BF33ED4CFF}</Project>
+      <Name>test_2d_oscillating_beam_cauchy</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_owsc\test_2d_owsc.vcxproj">
+      <Project>{761E7179-0CBB-3A0B-B5DA-D4201FBD9F13}</Project>
+      <Name>test_2d_owsc</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\test_python_interface\test_2d_owsc_python\test_2d_owsc_python.vcxproj">
+      <Project>{4E108E37-97E1-3EE4-9E85-B1999E16F7DF}</Project>
+      <Name>test_2d_owsc_python</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\unit_tests_src\for_2D_build\meshes\test_2d_particle_for_split\test_2d_particle_for_split.vcxproj">
+      <Project>{DDAC7A31-0228-302B-8549-8924BDCD0D0A}</Project>
+      <Name>test_2d_particle_for_split</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_particle_generator_single_resolution\test_2d_particle_generator_single_resolution.vcxproj">
+      <Project>{22BCC81F-1C6F-3769-8B12-8986977FC2E6}</Project>
+      <Name>test_2d_particle_generator_single_resolution</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\tests_sycl\2d_examples\test_2d_particle_generator_single_resolution_sycl\test_2d_particle_generator_single_resolution_sycl.vcxproj">
+      <Project>{DF6D7D4E-B936-34BB-8216-716C8A530509}</Project>
+      <Name>test_2d_particle_generator_single_resolution_sycl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_plate\test_2d_plate.vcxproj">
+      <Project>{E7077F71-2007-34C8-AD25-ADC4FADA2314}</Project>
+      <Name>test_2d_plate</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_poiseuille_flow\test_2d_poiseuille_flow.vcxproj">
+      <Project>{84D46CE7-DE36-395F-914B-501AF1ED7376}</Project>
+      <Name>test_2d_poiseuille_flow</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\extra_source_and_tests\test_2d_pulsatile_poiseuille_flow\test_2d_pulsatile_poiseuille_flow.vcxproj">
+      <Project>{655832D0-5322-34EA-AFB0-3B4CC5E67EC9}</Project>
+      <Name>test_2d_pulsatile_poiseuille_flow</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_rotation_patch\test_2d_rotation_patch.vcxproj">
+      <Project>{292DE4EB-1CB6-38B5-B537-B7C4C1B8F9A2}</Project>
+      <Name>test_2d_rotation_patch</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_self_contact\test_2d_self_contact.vcxproj">
+      <Project>{96624F39-E1F5-363B-A0D5-B31B47E0EF49}</Project>
+      <Name>test_2d_self_contact</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_shell\test_2d_shell.vcxproj">
+      <Project>{C68C44A7-DB02-3554-98EE-6E49252286E9}</Project>
+      <Name>test_2d_shell</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_shell_beam_collision\test_2d_shell_beam_collision.vcxproj">
+      <Project>{D4371521-BBFB-3BFE-A8C2-EA8E7B3DD7BA}</Project>
+      <Name>test_2d_shell_beam_collision</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_shell_particle_relaxation\test_2d_shell_particle_relaxation.vcxproj">
+      <Project>{44C4C91F-FC16-3C24-BE9E-7DDD73E35932}</Project>
+      <Name>test_2d_shell_particle_relaxation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_sliding\test_2d_sliding.vcxproj">
+      <Project>{AD57F369-1CC1-3D93-B89C-48F81B91816D}</Project>
+      <Name>test_2d_sliding</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_sliding_solid_shell\test_2d_sliding_solid_shell.vcxproj">
+      <Project>{F0EE5052-0C15-348F-B5C6-B27A8E366373}</Project>
+      <Name>test_2d_sliding_solid_shell</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_spinning_plate\test_2d_spinning_plate.vcxproj">
+      <Project>{3115C96F-B9DA-3F3B-92BB-A8C4BD68AB78}</Project>
+      <Name>test_2d_spinning_plate</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_square_droplet\test_2d_square_droplet.vcxproj">
+      <Project>{2577CEC4-8A3E-3B51-8CA5-ABC8EE67F262}</Project>
+      <Name>test_2d_square_droplet</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_standing_wave\test_2d_standing_wave.vcxproj">
+      <Project>{06160443-96B0-3D20-9E87-25AEB452455C}</Project>
+      <Name>test_2d_standing_wave</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_static_confinement\test_2d_static_confinement.vcxproj">
+      <Project>{FB8695DA-A68D-31FB-8775-675381334DC9}</Project>
+      <Name>test_2d_static_confinement</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_stfb\test_2d_stfb.vcxproj">
+      <Project>{48512061-57C6-3CAB-B351-E4E84E43334E}</Project>
+      <Name>test_2d_stfb</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\2d_examples_ck\test_2d_stfb_ck\test_2d_stfb_ck.vcxproj">
+      <Project>{7B8BF35A-19F9-370F-8D09-FBD5CF678226}</Project>
+      <Name>test_2d_stfb_ck</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\tests_sycl\2d_examples\test_2d_stfb_sycl\test_2d_stfb_sycl.vcxproj">
+      <Project>{0F2385C1-0BFB-3CD2-9C8F-C9470A44499D}</Project>
+      <Name>test_2d_stfb_sycl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\2d_examples_ck\test_2d_still_water_ck\test_2d_still_water_ck.vcxproj">
+      <Project>{7CBE00EE-E36C-3F1C-8614-91227ED72EB2}</Project>
+      <Name>test_2d_still_water_ck</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\tests_sycl\2d_examples\test_2d_still_water_sycl\test_2d_still_water_sycl.vcxproj">
+      <Project>{86D57AB1-A510-3F72-A5AF-583DFFCD485F}</Project>
+      <Name>test_2d_still_water_sycl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_stlw\test_2d_stlw.vcxproj">
+      <Project>{865BD0CD-32FE-3A48-B9E5-E0BDAEB5A74D}</Project>
+      <Name>test_2d_stlw</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_stretching\test_2d_stretching.vcxproj">
+      <Project>{A5DEE69E-BC3D-309E-ADBF-3E33A80AECD7}</Project>
+      <Name>test_2d_stretching</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_taylor_green\test_2d_taylor_green.vcxproj">
+      <Project>{86F6FD7C-51B9-31BA-B14D-808325BD3B34}</Project>
+      <Name>test_2d_taylor_green</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_tethered_dead_fish_in_flow\src\test_2d_tethered_dead_fish_in_flow.vcxproj">
+      <Project>{DBEC41B9-B043-3649-9201-B4B7A437DA26}</Project>
+      <Name>test_2d_tethered_dead_fish_in_flow</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_three_ring_impact\test_2d_three_ring_impact.vcxproj">
+      <Project>{C4748068-1972-34A3-A29A-79269BF96FA1}</Project>
+      <Name>test_2d_three_ring_impact</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_throat\test_2d_throat.vcxproj">
+      <Project>{E2746D82-A753-3C20-AC25-4C48A1AEA0E2}</Project>
+      <Name>test_2d_throat</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\extra_source_and_tests\test_2d_turbulent_channel\test_2d_turbulent_channel.vcxproj">
+      <Project>{C988EF8A-9CE7-3D75-B09A-A7D05A22F860}</Project>
+      <Name>test_2d_turbulent_channel</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_two_phase_dambreak\test_2d_two_phase_dambreak.vcxproj">
+      <Project>{3792E3D7-7C7B-3AFC-983E-67167DA36C3D}</Project>
+      <Name>test_2d_two_phase_dambreak</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\unit_tests_src\shared\particle_dynamics\fluid_dynamics\test_2d_velocity_gradient\test_2d_velocity_gradient.vcxproj">
+      <Project>{6CF7F693-E347-3BEE-B20F-087DDA6BC4EC}</Project>
+      <Name>test_2d_velocity_gradient</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_viscous_cream_drop\test_2d_viscous_cream_drop.vcxproj">
+      <Project>{6FED024E-DBAA-31F6-B781-1097A8A6639A}</Project>
+      <Name>test_2d_viscous_cream_drop</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_water_entry_exit\test_2d_water_entry_exit.vcxproj">
+      <Project>{7BEA1404-2ECC-3F5C-A3FB-2001052768EB}</Project>
+      <Name>test_2d_water_entry_exit</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_windows_frame_diffusion_D4\test_2d_windows_frame_diffusion_D4.vcxproj">
+      <Project>{04C8C9EC-C2C0-3D97-B489-477243263BFA}</Project>
+      <Name>test_2d_windows_frame_diffusion_D4</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\2d_examples\test_2d_windows_frame_diffusion_D7\test_2d_windows_frame_diffusion_D7.vcxproj">
+      <Project>{98BBC2D9-60DF-3D2D-958C-1737116B9201}</Project>
+      <Name>test_2d_windows_frame_diffusion_D7</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_FVM_incompressible_channel_flow\test_3d_FVM_incompressible_channel_flow.vcxproj">
+      <Project>{CEFBDEF6-D6D0-32CE-BDE5-79D7CC3E5AF2}</Project>
+      <Name>test_3d_FVM_incompressible_channel_flow</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_arch\test_3d_arch.vcxproj">
+      <Project>{2207908E-A4C7-3432-9978-3AF5DA119E39}</Project>
+      <Name>test_3d_arch</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_beam_pulling_pressure_load\test_3d_beam_pulling_pressure_load.vcxproj">
+      <Project>{75F0103E-1026-304E-8ECB-45CF83CDD1B5}</Project>
+      <Name>test_3d_beam_pulling_pressure_load</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_bending_circular_plate_parametric_cvt\test_3d_bending_circular_plate_parametric_cvt.vcxproj">
+      <Project>{4C775798-481D-3788-AB13-B882ACF9944B}</Project>
+      <Name>test_3d_bending_circular_plate_parametric_cvt</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_cubic_droplet\test_3d_cubic_droplet.vcxproj">
+      <Project>{DF03F39D-6473-3234-AD8E-B3F40334A96A}</Project>
+      <Name>test_3d_cubic_droplet</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_dambreak\test_3d_dambreak.vcxproj">
+      <Project>{7FE0359D-1F7E-320E-AF2A-8FAE73A9C895}</Project>
+      <Name>test_3d_dambreak</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\3d_examples_ck\test_3d_dambreak_ck\test_3d_dambreak_ck.vcxproj">
+      <Project>{A8F7C72C-4AFF-3AD6-9C0D-620D4E3502C6}</Project>
+      <Name>test_3d_dambreak_ck</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_dambreak_elastic_plate_shell\test_3d_dambreak_elastic_plate_shell.vcxproj">
+      <Project>{0740ED69-9AC9-36D1-81C7-5CE4DFAE8BE6}</Project>
+      <Name>test_3d_dambreak_elastic_plate_shell</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\tests_sycl\3d_examples\test_3d_dambreak_sycl\test_3d_dambreak_sycl.vcxproj">
+      <Project>{47BD5C0F-A592-3A94-9225-73F7FD7F669A}</Project>
+      <Name>test_3d_dambreak_sycl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_dynamic_plate\test_3d_dynamic_plate.vcxproj">
+      <Project>{EA51696F-AE1A-3E39-A031-DD90093D761D}</Project>
+      <Name>test_3d_dynamic_plate</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_elasticSolid_shell_collision\test_3d_elasticSolid_shell_collision.vcxproj">
+      <Project>{A5533AE9-086D-3B45-A871-A9F327501146}</Project>
+      <Name>test_3d_elasticSolid_shell_collision</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\unit_tests_src\for_3D_build\geometrices\test_3d_geometric_shape\test_3d_geometric_shape.vcxproj">
+      <Project>{545BEF70-4D0A-3CC0-8071-537CE39D0428}</Project>
+      <Name>test_3d_geometric_shape</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_heart_electromechanics\test_3d_heart_electromechanics.vcxproj">
+      <Project>{41B8A73C-288F-312E-A0FD-EC08D99475A5}</Project>
+      <Name>test_3d_heart_electromechanics</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_heart_volume_change\test_3d_heart_volume_change.vcxproj">
+      <Project>{BCD19D71-74FF-3D62-8FC1-935D7BCA56BF}</Project>
+      <Name>test_3d_heart_volume_change</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_load_image\test_3d_load_image.vcxproj">
+      <Project>{F410D293-DCD6-3B17-95CA-7011EDA1FEA6}</Project>
+      <Name>test_3d_load_image</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\3d_examples_ck\test_3d_mixed_poiseuille_flow_ck\test_3d_mixed_poiseuille_flow_ck.vcxproj">
+      <Project>{657CEE25-66CA-3811-852B-F60E432242CD}</Project>
+      <Name>test_3d_mixed_poiseuille_flow_ck</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\tests_sycl\3d_examples\test_3d_mixed_poiseuille_flow_sycl\test_3d_mixed_poiseuille_flow_sycl.vcxproj">
+      <Project>{85153FE1-8E94-3899-A1BF-5B59B55AA739}</Project>
+      <Name>test_3d_mixed_poiseuille_flow_sycl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_mr_cantilever_beam\test_3d_mr_cantilever_beam.vcxproj">
+      <Project>{FFDE8D06-25F2-3661-88AA-9D87AF6E5B6C}</Project>
+      <Name>test_3d_mr_cantilever_beam</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_muscle_activation\src\test_3d_muscle_activation.vcxproj">
+      <Project>{A43D2FB4-9B36-3392-9665-86926FAB7185}</Project>
+      <Name>test_3d_muscle_activation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_muscle_soft_body_contact\test_3d_muscle_soft_body_contact.vcxproj">
+      <Project>{4FEF6E43-16B8-344D-B4E6-5C3FF3C3FFA1}</Project>
+      <Name>test_3d_muscle_soft_body_contact</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_muscle_solid_contact\test_3d_muscle_solid_contact.vcxproj">
+      <Project>{E9653F45-E13A-3922-AAEA-D32622941370}</Project>
+      <Name>test_3d_muscle_solid_contact</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_network\test_3d_network.vcxproj">
+      <Project>{CAC9FDC6-F14E-34C6-96AB-CFE9AA674E2F}</Project>
+      <Name>test_3d_network</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_nonlinear_wave_fsi\test_3d_nonlinear_wave_fsi.vcxproj">
+      <Project>{7AC1F5EF-D08E-33CF-ADE8-655165413866}</Project>
+      <Name>test_3d_nonlinear_wave_fsi</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\unit_tests_src\for_3D_build\meshes\test_3d_particle_for_split\test_3d_particle_for_split.vcxproj">
+      <Project>{5655E930-D040-3745-8FC1-3196249ED54A}</Project>
+      <Name>test_3d_particle_for_split</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_particle_relaxation\test_3d_particle_relaxation.vcxproj">
+      <Project>{CE7EDDC1-EBB9-3E21-A8A4-1880EC5227B1}</Project>
+      <Name>test_3d_particle_relaxation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_particle_relaxation_single_resolution\test_3d_particle_relaxation_single_resolution.vcxproj">
+      <Project>{FC74CD36-64A0-359E-8B42-40A14456E035}</Project>
+      <Name>test_3d_particle_relaxation_single_resolution</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\tests_sycl\3d_examples\test_3d_particle_relaxation_single_resolution_sycl\test_3d_particle_relaxation_single_resolution_sycl.vcxproj">
+      <Project>{498A0B11-C031-3DC2-A87C-F9E3F0AD5E99}</Project>
+      <Name>test_3d_particle_relaxation_single_resolution_sycl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_passive_cantilever\test_3d_passive_cantilever.vcxproj">
+      <Project>{E9247C55-2AA0-32F6-9A3C-DCDD4860E117}</Project>
+      <Name>test_3d_passive_cantilever</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\extra_source_and_tests\test_3d_passive_cantilever_LG\test_3d_passive_cantilever_LG.vcxproj">
+      <Project>{9BC38B62-AE89-3CE2-92EA-DB573FCED26C}</Project>
+      <Name>test_3d_passive_cantilever_LG</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_passive_cantilever_neohookean\test_3d_passive_cantilever_neohookean.vcxproj">
+      <Project>{3C105C5B-2216-34BA-80D6-5BFD576E270B}</Project>
+      <Name>test_3d_passive_cantilever_neohookean</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_pkj_lv_electrocontraction\test_3d_pkj_lv_electrocontraction.vcxproj">
+      <Project>{AE95CB37-1CC0-3715-8FC5-2EBD2973B14C}</Project>
+      <Name>test_3d_pkj_lv_electrocontraction</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_play_simbody\test_3d_play_simbody.vcxproj">
+      <Project>{39BB8121-AA2B-3339-9C25-1C673219B9EB}</Project>
+      <Name>test_3d_play_simbody</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_poiseuille_flow_shell\test_3d_poiseuille_flow_shell.vcxproj">
+      <Project>{1F426AA0-9B5C-3D4B-8999-F87E9F0A2C58}</Project>
+      <Name>test_3d_poiseuille_flow_shell</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_repose_angle\test_3d_repose_angle.vcxproj">
+      <Project>{8DDEC6E1-C269-3F65-AD6D-999FE8198329}</Project>
+      <Name>test_3d_repose_angle</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\3d_examples_ck\test_3d_repose_angle_ck\test_3d_repose_angle_ck.vcxproj">
+      <Project>{655EF021-8D40-39A2-AE28-8F363D73131C}</Project>
+      <Name>test_3d_repose_angle_ck</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\tests_sycl\3d_examples\test_3d_repose_angle_sycl\test_3d_repose_angle_sycl.vcxproj">
+      <Project>{96E007E7-2750-3F10-9BA4-0AFA923E0C50}</Project>
+      <Name>test_3d_repose_angle_sycl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_roof\test_3d_roof.vcxproj">
+      <Project>{0B93F8FD-6F48-3524-809C-B1F02A856F0A}</Project>
+      <Name>test_3d_roof</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_roof_parametric_cvt\test_3d_roof_parametric_cvt.vcxproj">
+      <Project>{35CC8AC2-A490-33FE-91C6-6A7E96540568}</Project>
+      <Name>test_3d_roof_parametric_cvt</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_self_contact\test_3d_self_contact.vcxproj">
+      <Project>{FEE16D16-0993-3337-BF7E-3F503E8BAACA}</Project>
+      <Name>test_3d_self_contact</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_shell_particle_relaxation\test_3d_shell_particle_relaxation.vcxproj">
+      <Project>{632B5F20-2FA4-36C2-AEC5-2CA44202777A}</Project>
+      <Name>test_3d_shell_particle_relaxation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_shell_stability_half_sphere\test_3d_shell_stability_half_sphere.vcxproj">
+      <Project>{CFE7C8B6-3FB2-391B-92DB-FAB67E89A6A3}</Project>
+      <Name>test_3d_shell_stability_half_sphere</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_slender_beam\test_3d_slender_beam.vcxproj">
+      <Project>{D3695AE5-3A56-32BB-9295-73D8D9E248BE}</Project>
+      <Name>test_3d_slender_beam</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_sliding\test_3d_sliding.vcxproj">
+      <Project>{4188EF82-0ACF-33F3-9B11-71A223BBAC9C}</Project>
+      <Name>test_3d_sliding</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_stfb\test_3d_stfb.vcxproj">
+      <Project>{171DEDEB-67A4-3B82-A969-B219DDCE5425}</Project>
+      <Name>test_3d_stfb</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\3d_examples_ck\test_3d_stfb_ck\test_3d_stfb_ck.vcxproj">
+      <Project>{C8985732-DB66-3921-9B8A-20D5ED25ABCF}</Project>
+      <Name>test_3d_stfb_ck</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\tests_sycl\3d_examples\test_3d_stfb_sycl\test_3d_stfb_sycl.vcxproj">
+      <Project>{94944D7F-9F18-3552-9577-6E6631244CFE}</Project>
+      <Name>test_3d_stfb_sycl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_stlw\test_3d_stlw.vcxproj">
+      <Project>{936BEB47-C9B3-3A1D-BD13-1C97770FEC61}</Project>
+      <Name>test_3d_stlw</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\tests_sycl\3d_examples\test_3d_t_shape_pipe_sycl\test_3d_t_shape_pipe_sycl.vcxproj">
+      <Project>{AD26A50E-FC9A-3389-B46D-DEDEEC006AB6}</Project>
+      <Name>test_3d_t_shape_pipe_sycl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_taylor_bar\test_3d_taylor_bar.vcxproj">
+      <Project>{ADB09965-971D-390A-84AE-C89FE3B385B4}</Project>
+      <Name>test_3d_taylor_bar</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_taylor_bar_UL\test_3d_taylor_bar_UL.vcxproj">
+      <Project>{5FB0F996-9BDF-374E-BE62-FACB64B2F556}</Project>
+      <Name>test_3d_taylor_bar_UL</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\tests_sycl\3d_examples\test_3d_taylor_bar_sycl\test_3d_taylor_bar_sycl.vcxproj">
+      <Project>{20AF247C-A4B1-321E-A144-380BF23A2557}</Project>
+      <Name>test_3d_taylor_bar_sycl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_thin_plate\test_3d_thin_plate.vcxproj">
+      <Project>{4E63B32B-1377-3967-85B1-B99BB7E2132F}</Project>
+      <Name>test_3d_thin_plate</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\test_python_interface\test_3d_thin_plate_python\test_3d_thin_plate_python.vcxproj">
+      <Project>{EA1F45D9-B8C7-324A-83C5-BCCD279AD536}</Project>
+      <Name>test_3d_thin_plate_python</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_twisting_column\test_3d_twisting_column.vcxproj">
+      <Project>{A1AF8C21-8D78-3E50-8F3B-DE5A6342561D}</Project>
+      <Name>test_3d_twisting_column</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\3d_examples\test_3d_twisting_rigid_elastic_bar\test_3d_twisting_rigid_elastic_bar.vcxproj">
+      <Project>{82EB0E50-A513-3EE1-A7F8-E2EB6E3E3B96}</Project>
+      <Name>test_3d_twisting_rigid_elastic_bar</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\unit_tests_src\shared\test_kernels\test_anisotropic_kernel\test_anisotropic_kernel.vcxproj">
+      <Project>{577FEB28-B1FC-3BA6-8839-24070A72F7E7}</Project>
+      <Name>test_anisotropic_kernel</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\unit_tests_src\shared\geometries\test_complex_shape\test_complex_shape.vcxproj">
+      <Project>{5072A91C-A2F9-3B94-B0FA-32DFF96E1EC0}</Project>
+      <Name>test_complex_shape</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\unit_tests_src\shared\particle_dynamics\configuration_dynamics\test_exclusive_scan\test_exclusive_scan.vcxproj">
+      <Project>{6E2EF497-2FE8-3E0C-84F9-2B3990686B13}</Project>
+      <Name>test_exclusive_scan</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\unit_tests_src\shared\test_kernels\test_kernel_cubic_B_spline\test_kernel_cubic_B_spline.vcxproj">
+      <Project>{6C0D751F-FE15-3404-9BC5-082F0F6DE5BC}</Project>
+      <Name>test_kernel_cubic_B_spline</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\unit_tests_src\shared\common\test_scalar_functions\test_scalar_functions.vcxproj">
+      <Project>{2BB7E789-5313-3CCC-91D9-8569DAB3D565}</Project>
+      <Name>test_scalar_functions</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\unit_tests_src\shared\common\test_sph_data_containers\test_sph_data_containers.vcxproj">
+      <Project>{D1D66828-7381-33D9-ADCA-5A1D0A3F99C0}</Project>
+      <Name>test_sph_data_containers</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\unit_tests_src\shared\particle_dynamics\solid_dynamics\test_thin_structure_dynamics\test_thin_structure_dynamics.vcxproj">
+      <Project>{A89577B1-8985-3752-A8B3-4C10868D3E56}</Project>
+      <Name>test_thin_structure_dynamics</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\unit_tests_src\shared\common\test_vector_functions\test_vector_functions.vcxproj">
+      <Project>{9423FB67-65C4-35AC-8115-7300DF119DAE}</Project>
+      <Name>test_vector_functions</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\unit_tests_src\shared\test_vonMisesStrain\test_vonMisesStrain.vcxproj">
+      <Project>{A77357F2-E820-330D-989C-BFFE4A8677E0}</Project>
+      <Name>test_vonMisesStrain</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\unit_tests_src\shared\test_xml\test_xml.vcxproj">
+      <Project>{37543B83-5159-3613-A6F1-0067BA9259FF}</Project>
+      <Name>test_xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\unit_tests_src\shared\particle_dynamics\general_dynamics\unit_test_gradient_ck\unit_test_gradient_ck.vcxproj">
+      <Project>{8E15CD34-65CA-33FF-A4CC-4669F91A8094}</Project>
+      <Name>unit_test_gradient_ck</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\unit_tests_src\shared\particle_dynamics\general_dynamics\unit_test_interpolation_ck\unit_test_interpolation_ck.vcxproj">
+      <Project>{67DF2EAC-5EA8-3427-8E44-F1EA67088203}</Project>
+      <Name>unit_test_interpolation_ck</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

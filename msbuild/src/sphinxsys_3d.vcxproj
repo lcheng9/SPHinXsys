@@ -1,0 +1,877 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{00943E16-B2BF-3829-ACE2-06034F8E167D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>sphinxsys_3d</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\WelSimLLC-github\SPHinXsys\msbuild\src\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sphinxsys_3d.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sphinxsys_3d_d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\WelSimLLC-github\SPHinXsys\msbuild\src\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sphinxsys_3d.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sphinxsys_3d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\WelSimLLC-github\SPHinXsys\msbuild\src\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">sphinxsys_3d.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">sphinxsys_3d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\WelSimLLC-github\SPHinXsys\msbuild\src\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">sphinxsys_3d.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">sphinxsys_3d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>D:/WelSimLLC/CodeDV/libPack/include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>D:/WelSimLLC/CodeDV/libPack/include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\WelSimLLC-github\SPHinXsys\src\shared\adaptations;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\complex_bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\body_relations;D:\WelSimLLC-github\SPHinXsys\src\shared\common;D:\WelSimLLC-github\SPHinXsys\src\shared\geometries;D:\WelSimLLC-github\SPHinXsys\src\shared\include;D:\WelSimLLC-github\SPHinXsys\src\shared\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\kernels;D:\WelSimLLC-github\SPHinXsys\src\shared\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\active_muscle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\continuum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_optimization_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\dissipation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\electro_physiology;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\execution;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\external_force;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\eulerian_fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\non_newtonian_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\domian_bouding;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\contact_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_neighborhood;D:\WelSimLLC-github\SPHinXsys\src\shared\particles;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials;D:\WelSimLLC-github\SPHinXsys\src\shared\regression_test;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\body_relation;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\include;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\riemann_solver;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_structure_interaction;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\adaptation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\smoothing_kernel;D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys;D:\WelSimLLC-github\SPHinXsys\src\shared\sphinxsys_system;D:\WelSimLLC-github\SPHinXsys\src\shared\tools;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies\TransferUNV;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\common;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\geometries;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\io_system;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particles;D:/WelSimLLC/CodeDV/libPack/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/WelSimLLC-github/simbody/myInstall/include" /external:I "D:/WelSimLLC/CodeDV/include/eigen3" /external:I "D:/WelSimLLC-github/vcpkg/installed/x64-windows/include" /Zc:__cplusplus /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope>
+      </ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild>
+      </MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData>
+      </RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode>
+      </SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType>
+      </TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_USE_MATH_DEFINES;NOMINMAX;SPHINXSYS_USE_SYCL=0;SPHINXSYS_USE_FLOAT=0;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;BOOST_AVAILABLE;TBB_USE_DEBUG;SPDLOG_FMT_EXTERNAL;SPDLOG_FWRITE_UNLOCKED;FMT_SHARED;GTEST_LINKED_AS_SHARED_LIBRARY=1;CMAKE_INTDIR="Debug";BOOST_ALL_DYN_LINK</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_USE_MATH_DEFINES;NOMINMAX;SPHINXSYS_USE_SYCL=0;SPHINXSYS_USE_FLOAT=0;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;BOOST_AVAILABLE;TBB_USE_DEBUG;SPDLOG_FMT_EXTERNAL;SPDLOG_FWRITE_UNLOCKED;FMT_SHARED;GTEST_LINKED_AS_SHARED_LIBRARY=1;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\WelSimLLC-github\SPHinXsys\src\shared\adaptations;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\complex_bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\body_relations;D:\WelSimLLC-github\SPHinXsys\src\shared\common;D:\WelSimLLC-github\SPHinXsys\src\shared\geometries;D:\WelSimLLC-github\SPHinXsys\src\shared\include;D:\WelSimLLC-github\SPHinXsys\src\shared\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\kernels;D:\WelSimLLC-github\SPHinXsys\src\shared\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\active_muscle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\continuum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_optimization_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\dissipation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\electro_physiology;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\execution;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\external_force;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\eulerian_fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\non_newtonian_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\domian_bouding;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\contact_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_neighborhood;D:\WelSimLLC-github\SPHinXsys\src\shared\particles;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials;D:\WelSimLLC-github\SPHinXsys\src\shared\regression_test;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\body_relation;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\include;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\riemann_solver;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_structure_interaction;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\adaptation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\smoothing_kernel;D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys;D:\WelSimLLC-github\SPHinXsys\src\shared\sphinxsys_system;D:\WelSimLLC-github\SPHinXsys\src\shared\tools;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies\TransferUNV;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\common;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\geometries;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\io_system;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particles;D:\WelSimLLC-github\simbody\myInstall\include;D:\WelSimLLC\CodeDV\include\eigen3;D:\WelSimLLC-github\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\WelSimLLC-github\SPHinXsys\src\shared\adaptations;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\complex_bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\body_relations;D:\WelSimLLC-github\SPHinXsys\src\shared\common;D:\WelSimLLC-github\SPHinXsys\src\shared\geometries;D:\WelSimLLC-github\SPHinXsys\src\shared\include;D:\WelSimLLC-github\SPHinXsys\src\shared\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\kernels;D:\WelSimLLC-github\SPHinXsys\src\shared\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\active_muscle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\continuum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_optimization_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\dissipation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\electro_physiology;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\execution;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\external_force;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\eulerian_fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\non_newtonian_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\domian_bouding;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\contact_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_neighborhood;D:\WelSimLLC-github\SPHinXsys\src\shared\particles;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials;D:\WelSimLLC-github\SPHinXsys\src\shared\regression_test;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\body_relation;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\include;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\riemann_solver;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_structure_interaction;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\adaptation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\smoothing_kernel;D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys;D:\WelSimLLC-github\SPHinXsys\src\shared\sphinxsys_system;D:\WelSimLLC-github\SPHinXsys\src\shared\tools;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies\TransferUNV;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\common;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\geometries;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\io_system;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particles;D:\WelSimLLC-github\simbody\myInstall\include;D:\WelSimLLC\CodeDV\include\eigen3;D:\WelSimLLC-github\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\WelSimLLC-github\SPHinXsys\src\shared\adaptations;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\complex_bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\body_relations;D:\WelSimLLC-github\SPHinXsys\src\shared\common;D:\WelSimLLC-github\SPHinXsys\src\shared\geometries;D:\WelSimLLC-github\SPHinXsys\src\shared\include;D:\WelSimLLC-github\SPHinXsys\src\shared\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\kernels;D:\WelSimLLC-github\SPHinXsys\src\shared\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\active_muscle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\continuum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_optimization_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\dissipation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\electro_physiology;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\execution;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\external_force;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\eulerian_fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\non_newtonian_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\domian_bouding;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\contact_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_neighborhood;D:\WelSimLLC-github\SPHinXsys\src\shared\particles;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials;D:\WelSimLLC-github\SPHinXsys\src\shared\regression_test;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\body_relation;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\include;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\riemann_solver;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_structure_interaction;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\adaptation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\smoothing_kernel;D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys;D:\WelSimLLC-github\SPHinXsys\src\shared\sphinxsys_system;D:\WelSimLLC-github\SPHinXsys\src\shared\tools;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies\TransferUNV;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\common;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\geometries;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\io_system;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particles;D:/WelSimLLC/CodeDV/libPack/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/WelSimLLC-github/simbody/myInstall/include" /external:I "D:/WelSimLLC/CodeDV/include/eigen3" /external:I "D:/WelSimLLC-github/vcpkg/installed/x64-windows/include" /Zc:__cplusplus /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ConformanceMode>true</ConformanceMode>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope>
+      </ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild>
+      </MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData>
+      </RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode>
+      </SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType>
+      </TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;SPHINXSYS_USE_SYCL=0;SPHINXSYS_USE_FLOAT=0;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;BOOST_AVAILABLE;SPDLOG_FMT_EXTERNAL;SPDLOG_FWRITE_UNLOCKED;FMT_SHARED;GTEST_LINKED_AS_SHARED_LIBRARY=1;CMAKE_INTDIR="Release";BOOST_ALL_DYN_LINK</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;SPHINXSYS_USE_SYCL=0;SPHINXSYS_USE_FLOAT=0;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;BOOST_AVAILABLE;SPDLOG_FMT_EXTERNAL;SPDLOG_FWRITE_UNLOCKED;FMT_SHARED;GTEST_LINKED_AS_SHARED_LIBRARY=1;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\WelSimLLC-github\SPHinXsys\src\shared\adaptations;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\complex_bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\body_relations;D:\WelSimLLC-github\SPHinXsys\src\shared\common;D:\WelSimLLC-github\SPHinXsys\src\shared\geometries;D:\WelSimLLC-github\SPHinXsys\src\shared\include;D:\WelSimLLC-github\SPHinXsys\src\shared\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\kernels;D:\WelSimLLC-github\SPHinXsys\src\shared\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\active_muscle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\continuum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_optimization_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\dissipation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\electro_physiology;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\execution;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\external_force;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\eulerian_fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\non_newtonian_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\domian_bouding;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\contact_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_neighborhood;D:\WelSimLLC-github\SPHinXsys\src\shared\particles;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials;D:\WelSimLLC-github\SPHinXsys\src\shared\regression_test;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\body_relation;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\include;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\riemann_solver;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_structure_interaction;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\adaptation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\smoothing_kernel;D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys;D:\WelSimLLC-github\SPHinXsys\src\shared\sphinxsys_system;D:\WelSimLLC-github\SPHinXsys\src\shared\tools;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies\TransferUNV;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\common;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\geometries;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\io_system;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particles;D:\WelSimLLC-github\simbody\myInstall\include;D:\WelSimLLC\CodeDV\include\eigen3;D:\WelSimLLC-github\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\WelSimLLC-github\SPHinXsys\src\shared\adaptations;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\complex_bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\body_relations;D:\WelSimLLC-github\SPHinXsys\src\shared\common;D:\WelSimLLC-github\SPHinXsys\src\shared\geometries;D:\WelSimLLC-github\SPHinXsys\src\shared\include;D:\WelSimLLC-github\SPHinXsys\src\shared\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\kernels;D:\WelSimLLC-github\SPHinXsys\src\shared\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\active_muscle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\continuum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_optimization_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\dissipation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\electro_physiology;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\execution;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\external_force;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\eulerian_fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\non_newtonian_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\domian_bouding;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\contact_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_neighborhood;D:\WelSimLLC-github\SPHinXsys\src\shared\particles;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials;D:\WelSimLLC-github\SPHinXsys\src\shared\regression_test;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\body_relation;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\include;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\riemann_solver;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_structure_interaction;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\adaptation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\smoothing_kernel;D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys;D:\WelSimLLC-github\SPHinXsys\src\shared\sphinxsys_system;D:\WelSimLLC-github\SPHinXsys\src\shared\tools;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies\TransferUNV;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\common;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\geometries;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\io_system;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particles;D:\WelSimLLC-github\simbody\myInstall\include;D:\WelSimLLC\CodeDV\include\eigen3;D:\WelSimLLC-github\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\WelSimLLC-github\SPHinXsys\src\shared\adaptations;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\complex_bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\body_relations;D:\WelSimLLC-github\SPHinXsys\src\shared\common;D:\WelSimLLC-github\SPHinXsys\src\shared\geometries;D:\WelSimLLC-github\SPHinXsys\src\shared\include;D:\WelSimLLC-github\SPHinXsys\src\shared\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\kernels;D:\WelSimLLC-github\SPHinXsys\src\shared\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\active_muscle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\continuum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_optimization_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\dissipation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\electro_physiology;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\execution;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\external_force;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\eulerian_fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\non_newtonian_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\domian_bouding;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\contact_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_neighborhood;D:\WelSimLLC-github\SPHinXsys\src\shared\particles;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials;D:\WelSimLLC-github\SPHinXsys\src\shared\regression_test;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\body_relation;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\include;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\riemann_solver;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_structure_interaction;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\adaptation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\smoothing_kernel;D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys;D:\WelSimLLC-github\SPHinXsys\src\shared\sphinxsys_system;D:\WelSimLLC-github\SPHinXsys\src\shared\tools;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies\TransferUNV;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\common;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\geometries;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\io_system;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/WelSimLLC-github/simbody/myInstall/include" /external:I "D:/WelSimLLC/CodeDV/include/eigen3" /external:I "D:/WelSimLLC-github/vcpkg/installed/x64-windows/include" /Zc:__cplusplus /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope>
+      </ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild>
+      </MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData>
+      </RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode>
+      </SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType>
+      </TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;SPHINXSYS_USE_SYCL=0;SPHINXSYS_USE_FLOAT=0;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;BOOST_AVAILABLE;TBB_USE_DEBUG;SPDLOG_FMT_EXTERNAL;SPDLOG_FWRITE_UNLOCKED;FMT_SHARED;GTEST_LINKED_AS_SHARED_LIBRARY=1;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;SPHINXSYS_USE_SYCL=0;SPHINXSYS_USE_FLOAT=0;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;BOOST_AVAILABLE;TBB_USE_DEBUG;SPDLOG_FMT_EXTERNAL;SPDLOG_FWRITE_UNLOCKED;FMT_SHARED;GTEST_LINKED_AS_SHARED_LIBRARY=1;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\WelSimLLC-github\SPHinXsys\src\shared\adaptations;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\complex_bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\body_relations;D:\WelSimLLC-github\SPHinXsys\src\shared\common;D:\WelSimLLC-github\SPHinXsys\src\shared\geometries;D:\WelSimLLC-github\SPHinXsys\src\shared\include;D:\WelSimLLC-github\SPHinXsys\src\shared\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\kernels;D:\WelSimLLC-github\SPHinXsys\src\shared\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\active_muscle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\continuum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_optimization_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\dissipation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\electro_physiology;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\execution;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\external_force;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\eulerian_fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\non_newtonian_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\domian_bouding;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\contact_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_neighborhood;D:\WelSimLLC-github\SPHinXsys\src\shared\particles;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials;D:\WelSimLLC-github\SPHinXsys\src\shared\regression_test;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\body_relation;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\include;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\riemann_solver;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_structure_interaction;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\adaptation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\smoothing_kernel;D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys;D:\WelSimLLC-github\SPHinXsys\src\shared\sphinxsys_system;D:\WelSimLLC-github\SPHinXsys\src\shared\tools;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies\TransferUNV;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\common;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\geometries;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\io_system;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particles;D:\WelSimLLC-github\simbody\myInstall\include;D:\WelSimLLC\CodeDV\include\eigen3;D:\WelSimLLC-github\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\WelSimLLC-github\SPHinXsys\src\shared\adaptations;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\complex_bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\body_relations;D:\WelSimLLC-github\SPHinXsys\src\shared\common;D:\WelSimLLC-github\SPHinXsys\src\shared\geometries;D:\WelSimLLC-github\SPHinXsys\src\shared\include;D:\WelSimLLC-github\SPHinXsys\src\shared\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\kernels;D:\WelSimLLC-github\SPHinXsys\src\shared\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\active_muscle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\continuum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_optimization_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\dissipation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\electro_physiology;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\execution;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\external_force;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\eulerian_fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\non_newtonian_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\domian_bouding;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\contact_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_neighborhood;D:\WelSimLLC-github\SPHinXsys\src\shared\particles;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials;D:\WelSimLLC-github\SPHinXsys\src\shared\regression_test;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\body_relation;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\include;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\riemann_solver;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_structure_interaction;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\adaptation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\smoothing_kernel;D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys;D:\WelSimLLC-github\SPHinXsys\src\shared\sphinxsys_system;D:\WelSimLLC-github\SPHinXsys\src\shared\tools;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies\TransferUNV;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\common;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\geometries;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\io_system;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particles;D:\WelSimLLC-github\simbody\myInstall\include;D:\WelSimLLC\CodeDV\include\eigen3;D:\WelSimLLC-github\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\WelSimLLC-github\SPHinXsys\src\shared\adaptations;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\complex_bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\body_relations;D:\WelSimLLC-github\SPHinXsys\src\shared\common;D:\WelSimLLC-github\SPHinXsys\src\shared\geometries;D:\WelSimLLC-github\SPHinXsys\src\shared\include;D:\WelSimLLC-github\SPHinXsys\src\shared\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\kernels;D:\WelSimLLC-github\SPHinXsys\src\shared\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\active_muscle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\continuum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_optimization_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\dissipation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\electro_physiology;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\execution;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\external_force;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\eulerian_fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\non_newtonian_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\domian_bouding;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\contact_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_neighborhood;D:\WelSimLLC-github\SPHinXsys\src\shared\particles;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials;D:\WelSimLLC-github\SPHinXsys\src\shared\regression_test;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\body_relation;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\include;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\riemann_solver;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_structure_interaction;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\adaptation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\smoothing_kernel;D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys;D:\WelSimLLC-github\SPHinXsys\src\shared\sphinxsys_system;D:\WelSimLLC-github\SPHinXsys\src\shared\tools;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies\TransferUNV;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\common;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\geometries;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\io_system;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/WelSimLLC-github/simbody/myInstall/include" /external:I "D:/WelSimLLC/CodeDV/include/eigen3" /external:I "D:/WelSimLLC-github/vcpkg/installed/x64-windows/include" /Zc:__cplusplus /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope>
+      </ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild>
+      </MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData>
+      </RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode>
+      </SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType>
+      </TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;SPHINXSYS_USE_SYCL=0;SPHINXSYS_USE_FLOAT=0;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;BOOST_AVAILABLE;TBB_USE_DEBUG;SPDLOG_FMT_EXTERNAL;SPDLOG_FWRITE_UNLOCKED;FMT_SHARED;GTEST_LINKED_AS_SHARED_LIBRARY=1;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;SPHINXSYS_USE_SYCL=0;SPHINXSYS_USE_FLOAT=0;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;BOOST_AVAILABLE;TBB_USE_DEBUG;SPDLOG_FMT_EXTERNAL;SPDLOG_FWRITE_UNLOCKED;FMT_SHARED;GTEST_LINKED_AS_SHARED_LIBRARY=1;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\WelSimLLC-github\SPHinXsys\src\shared\adaptations;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\complex_bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\body_relations;D:\WelSimLLC-github\SPHinXsys\src\shared\common;D:\WelSimLLC-github\SPHinXsys\src\shared\geometries;D:\WelSimLLC-github\SPHinXsys\src\shared\include;D:\WelSimLLC-github\SPHinXsys\src\shared\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\kernels;D:\WelSimLLC-github\SPHinXsys\src\shared\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\active_muscle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\continuum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_optimization_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\dissipation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\electro_physiology;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\execution;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\external_force;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\eulerian_fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\non_newtonian_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\domian_bouding;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\contact_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_neighborhood;D:\WelSimLLC-github\SPHinXsys\src\shared\particles;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials;D:\WelSimLLC-github\SPHinXsys\src\shared\regression_test;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\body_relation;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\include;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\riemann_solver;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_structure_interaction;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\adaptation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\smoothing_kernel;D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys;D:\WelSimLLC-github\SPHinXsys\src\shared\sphinxsys_system;D:\WelSimLLC-github\SPHinXsys\src\shared\tools;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies\TransferUNV;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\common;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\geometries;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\io_system;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particles;D:\WelSimLLC-github\simbody\myInstall\include;D:\WelSimLLC\CodeDV\include\eigen3;D:\WelSimLLC-github\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\WelSimLLC-github\SPHinXsys\src\shared\adaptations;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\complex_bodies;D:\WelSimLLC-github\SPHinXsys\src\shared\body_relations;D:\WelSimLLC-github\SPHinXsys\src\shared\common;D:\WelSimLLC-github\SPHinXsys\src\shared\geometries;D:\WelSimLLC-github\SPHinXsys\src\shared\include;D:\WelSimLLC-github\SPHinXsys\src\shared\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\kernels;D:\WelSimLLC-github\SPHinXsys\src\shared\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes;D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\active_muscle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\continuum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_optimization_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\dissipation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\electro_physiology;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\execution;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\external_force;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\eulerian_fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\non_newtonian_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\domian_bouding;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\contact_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\shared\particle_neighborhood;D:\WelSimLLC-github\SPHinXsys\src\shared\particles;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure;D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials;D:\WelSimLLC-github\SPHinXsys\src\shared\regression_test;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\body_relation;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\include;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\io_system;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\configuration_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\diffusion_reaction_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\boundary_condition;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\riemann_solver;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_structure_interaction;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\adaptation_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\surface_indication;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\relax_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\smoothing_kernel;D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys;D:\WelSimLLC-github\SPHinXsys\src\shared\sphinxsys_system;D:\WelSimLLC-github\SPHinXsys\src\shared\tools;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies\TransferUNV;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\common;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\geometries;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\io_system;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\mesh_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\sparse_storage_mesh;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\solid_dynamics;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_generator;D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particles;D:\WelSimLLC-github\simbody\myInstall\include;D:\WelSimLLC\CodeDV\include\eigen3;D:\WelSimLLC-github\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\WelSimLLC-github\SPHinXsys\src\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/WelSimLLC-github/SPHinXsys/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/WelSimLLC-github/SPHinXsys -BD:/WelSimLLC-github/SPHinXsys/msbuild --check-stamp-file D:/WelSimLLC-github/SPHinXsys/msbuild/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\WelSimLLC-github\SPHinXsys\msbuild\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/WelSimLLC-github/SPHinXsys/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/WelSimLLC-github/SPHinXsys -BD:/WelSimLLC-github/SPHinXsys/msbuild --check-stamp-file D:/WelSimLLC-github/SPHinXsys/msbuild/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\WelSimLLC-github\SPHinXsys\msbuild\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/WelSimLLC-github/SPHinXsys/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/WelSimLLC-github/SPHinXsys -BD:/WelSimLLC-github/SPHinXsys/msbuild --check-stamp-file D:/WelSimLLC-github/SPHinXsys/msbuild/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\WelSimLLC-github\SPHinXsys\msbuild\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/WelSimLLC-github/SPHinXsys/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/WelSimLLC-github/SPHinXsys -BD:/WelSimLLC-github/SPHinXsys/msbuild --check-stamp-file D:/WelSimLLC-github/SPHinXsys/msbuild/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\WelSimLLC-github\SPHinXsys\msbuild\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\WelSimLLC-github\SPHinXsys\msbuild\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\adaptations\adaptation.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\adaptations\adaptation.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\all_bodies.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\base_body.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\base_body_part.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\body_partition.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\complex_bodies\all_complex_bodies.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\complex_bodies\mesh_helper.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\complex_bodies\secondary_structure.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\complex_bodies\tree_body.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\complex_bodies\unstructured_mesh.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\complex_bodies\unstructured_mesh2.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\fluid_body.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\observer_body.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\solid_body.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\body_relations\all_body_relations.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\body_relations\base_body_relation.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\body_relations\complex_body_relation.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\body_relations\contact_body_relation.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\body_relations\inner_body_relation.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\common\array_allocation.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\common\base_data_package.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\common\base_data_type.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\common\base_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\common\common_functors.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\common\geometric_primitive.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\common\image_mhd.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\common\image_mhd.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\common\large_data_containers.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\common\ownership.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\common\scalar_functions.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\common\scalar_numerics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\common\sphinxsys_buffer_array.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\common\sphinxsys_constant.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\common\sphinxsys_containers.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\common\sphinxsys_variable.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\common\sphinxsys_variable_array.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\common\vector_functions.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\geometries\base_geometry.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\geometries\complex_geometry.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\geometries\geometric_element.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\geometries\geometric_shape.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\geometries\level_set.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\geometries\level_set.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\geometries\level_set_shape.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\geometries\mapping_shape.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\geometries\transform_geometry.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\include\sphinxsys.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\all_io.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\io_all.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\io_base.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\io_environment.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\io_log.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\io_observation.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\io_plt.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\io_plt.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\io_simbody.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\io_vtk.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\io_vtk.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\io_vtk_mesh.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\parameterization.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\kernels\all_kernels.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\kernels\anisotropic_kernel.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\kernels\anisotropic_kernel.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\kernels\base_kernel.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\kernels\kernel_cubic_B_spline.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\kernels\kernel_hyperbolic.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\kernels\kernel_laguerre_gauss.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\kernels\kernel_quadratic.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\kernels\kernel_tabulated.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\kernels\kernel_wendland_c2.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\mesh_dynamics\all_mesh_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\mesh_dynamics\mesh_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\mesh_dynamics\mesh_local_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\base_mesh.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\cell_linked_list.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\cell_linked_list.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\mesh_iterators.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\sparse_storage_mesh\grid_data_package_function.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\sparse_storage_mesh\grid_data_package_function.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\sparse_storage_mesh\grid_data_package_type.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\sparse_storage_mesh\mesh_with_data_packages.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\sparse_storage_mesh\mesh_with_data_packages.hxx" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\active_muscle_dynamics\active_muscle_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\all_particle_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\all_shared_physical_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\base_local_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\base_particle_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\configuration_dynamics\all_configuration_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\configuration_dynamics\particle_sorting.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\configuration_dynamics\particle_sorting.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\continuum_dynamics\all_continuum_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\continuum_dynamics\base_continuum_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\continuum_dynamics\continuum_dynamics_variable.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\continuum_dynamics\continuum_integration.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\continuum_dynamics\continuum_integration.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_optimization_dynamics\diffusion_optimization.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_optimization_dynamics\diffusion_optimization_common.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_optimization_dynamics\diffusion_optimization_common.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_optimization_dynamics\diffusion_splitting_base.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_optimization_dynamics\diffusion_splitting_base.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_optimization_dynamics\diffusion_splitting_parameter.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_optimization_dynamics\diffusion_splitting_parameter.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_optimization_dynamics\diffusion_splitting_state.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_optimization_dynamics\diffusion_splitting_state.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_reaction_dynamics\all_diffusion_reaction_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_reaction_dynamics\diffusion_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_reaction_dynamics\diffusion_dynamics.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_reaction_dynamics\general_diffusion_reaction_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_reaction_dynamics\reaction_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_reaction_dynamics\reaction_dynamics.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\dissipation_dynamics\particle_dynamics_dissipation.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\dissipation_dynamics\particle_dynamics_dissipation.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\dynamics_algorithms.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\electro_physiology\electro_physiology.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\execution\base_implementation.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\execution\execution_policy.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\execution\implementation.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\external_force\external_force.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\all_fluid_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\base_fluid_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\boundary_condition\all_fluid_boundaries.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\boundary_condition\fluid_boundary.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\boundary_condition\near_wall_boundary.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\boundary_condition\non_reflective_boundary.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\density_summation.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\density_summation.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\eulerian_fluid_dynamics\all_eulerian_fluid_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\eulerian_fluid_dynamics\eulerian_compressible_fluid_integration.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\eulerian_fluid_dynamics\eulerian_compressible_fluid_integration.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\eulerian_fluid_dynamics\eulerian_fluid_integration.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\eulerian_fluid_dynamics\eulerian_fluid_integration.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\eulerian_fluid_dynamics\eulerian_riemann_solver.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\fluid_integration.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\fluid_integration.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\fluid_time_step.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\non_newtonian_dynamics\non_newtonian_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\shape_confinement.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\surface_tension.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\surface_tension.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\transport_velocity_correction.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\transport_velocity_correction.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\velocity_gradient.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\velocity_gradient.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\viscous_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\viscous_dynamics.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\all_general_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\base_general_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\boundary_condition\eulerian_ghost_boundary.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\boundary_condition\fvm_ghost_boundary.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\domian_bouding\all_domain_bounding.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\domian_bouding\domain_bounding.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\domian_bouding\ghost_bounding.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\force_prior.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\force_prior.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\general_constraint.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\general_geometric.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\general_interpolation.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\general_reduce.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\kernel_correction.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\kernel_correction.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\particle_smoothing.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\particle_smoothing.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\surface_indication\all_surface_indication.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\surface_indication\smeared_surface_indication.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\surface_indication\surface_indication.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\surface_indication\surface_indication.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\particle_functors.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\particle_iterators.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\reduce_functors.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\relax_dynamics\all_relax_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\relax_dynamics\base_relax_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\relax_dynamics\relax_stepping.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\relax_dynamics\relax_stepping.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\relax_dynamics\relax_thick_shell.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\all_solid_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\constraint_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\constraint_dynamics.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\contact_dynamics\all_contact_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\contact_dynamics\base_contact_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\contact_dynamics\contact_friction.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\contact_dynamics\contact_repulsion.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\contact_dynamics\repulsion_factor_summation.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\elastic_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\fluid_structure_interaction.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\fluid_structure_interaction.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\general_solid_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\inelastic_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\loading_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\solid_dynamics_variable.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\thin_structure_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\thin_structure_math.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator\base_particle_generator.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator\base_particle_generator.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator\particle_generator_lattice.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator\particle_generator_mesh.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator\particle_generator_mesh2.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator\particle_generator_reserve.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_neighborhood\neighborhood.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particles\all_shared_particles.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particles\base_particles.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particles\base_particles.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particles\observer_particles.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particles\particle_operation.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particles\particle_operation.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particles\particle_reserve.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particles\surface_particles.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\all_closures.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\closure_wrapper.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\all_materials.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\base_material.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\complex_solid.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\complex_solid.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\compressible_fluid.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\diffusion_reaction.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\elastic_solid.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\general_continuum.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\general_continuum.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\inelastic_solid.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\riemann_solver.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\viscosity.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\weakly_compressible_fluid.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\regression_test\all_regression_test_methods.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\regression_test\dynamic_time_warping_method.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\regression_test\dynamic_time_warping_method.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\regression_test\ensemble_average_method.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\regression_test\ensemble_average_method.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\regression_test\regression_test_base.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\regression_test\regression_test_base.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\regression_test\time_average_method.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\regression_test\time_average_method.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\body_relation\neighbor_method.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\body_relation\neighborhood_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\body_relation\relation_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\body_relation\relation_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\include\sphinxsys_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\io_system\io_all_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\io_system\io_base_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\io_system\io_observation_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\io_system\io_vtk_mesh_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\all_shared_physical_dynamics_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\complex_algorithms_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\configuration_dynamics\base_configuration_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\configuration_dynamics\particle_sort_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\configuration_dynamics\particle_sort_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\configuration_dynamics\update_body_relation.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\configuration_dynamics\update_body_relation.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\configuration_dynamics\update_cell_linked_list.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\configuration_dynamics\update_cell_linked_list.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics\all_continum_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics\continuum_dynamics_variable_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics\continuum_dynamics_variable_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics\continuum_integration_1st_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics\continuum_integration_1st_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics\continuum_integration_2nd_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics\continuum_integration_2nd_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics\initialization_dynamics_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics\initialization_dynamics_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics\initilization_dynamics_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics\initilization_dynamics_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics\stress_diffusion_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics\stress_diffusion_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\diffusion_reaction_dynamics\diffusion_dynamics_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\diffusion_reaction_dynamics\diffusion_dynamics_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\acoustic_step_1st_half.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\acoustic_step_1st_half.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\acoustic_step_2nd_half.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\acoustic_step_2nd_half.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\all_shared_fluid_dynamics_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\boundary_condition\all_fluid_boundary_condition_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\boundary_condition\bidirectional_boundary_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\boundary_condition\bidirectional_boundary_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\boundary_condition\emitter_boundary_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\boundary_condition\emitter_boundary_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\boundary_condition\fluid_boundary_state.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\boundary_condition\fluid_boundary_state.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\density_regularization.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\density_regularization.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\fluid_time_step_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\fluid_time_step_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\riemann_solver\riemann_solver_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\riemann_solver\riemann_solver_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\transport_velocity_correction_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\transport_velocity_correction_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\viscous_force.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\viscous_force.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_structure_interaction\all_fluid_structure_interactions.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_structure_interaction\force_on_structure.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_structure_interaction\force_on_structure.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\adaptation_dynamics\adapt_criterion.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\adaptation_dynamics\adapt_indication.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\all_general_dynamics_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\force_prior_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\force_prior_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\general_assignment.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\general_constraint_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\general_gradient.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\general_gradient.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\general_reduce_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\general_reduce_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\geometric_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\geometric_dynamics.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\hessian_correction_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\hessian_correction_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\interpolation_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\interpolation_dynamics.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\kernel_correction_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\kernel_correction_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\kernel_gradient_integral.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\kernel_gradient_integral.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\surface_indication\all_surface_indication_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\surface_indication\surface_indication_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\surface_indication\surface_indication_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\interaction_algorithms_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\interaction_algorithms_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\interaction_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\interaction_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\loop_range.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\particle_functors_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\particle_iterators_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\particle_method_container.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\relax_dynamics\all_relax_dynamics_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\relax_dynamics\level_set_correction.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\relax_dynamics\level_set_correction.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\relax_dynamics\relaxation_residual_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\relax_dynamics\relaxation_residual_ck.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\relax_dynamics\relaxation_stepping_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\simple_algorithms_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\solid_dynamics\all_solid_dynamics_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\solid_dynamics\derived_solid_state.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\solid_dynamics\solid_constraint.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\solid_dynamics\solid_constraint.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\sph_solver.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\smoothing_kernel\kernel_tabulated_ck.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys\all_simbody.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys\body_part_for_simbody.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys\exception.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys\simbody_middle.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys\simtk_wrapper.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys\state_engine.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys\xml_engine.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\sphinxsys_system\sph_system.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\sphinxsys_system\sph_system.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\tools\tinyxml2.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\shared\tools\xml_parser.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies\TransferUNV\WMDataEnums.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies\mesh_helper_unv_3d.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\common\data_type.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\geometries\TriangleMeshDistance.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\geometries\all_geometries.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\geometries\image_shape.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\geometries\stl_reader.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\geometries\triangle_mesh_shape.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\io_system\io_vtk_mesh_3d.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\mesh_dynamics\mesh_local_dynamics.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\block_cluster_3d.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\mesh_iterators.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\sparse_storage_mesh\grid_data_package_function.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\sparse_storage_mesh\grid_data_package_type.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\sparse_storage_mesh\mesh_with_data_packages.hpp" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\write_mesh_field_to_plt.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\all_physical_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\solid_dynamics\polar_decomposition_3x3.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\solid_dynamics\polar_decomposition_3x3_impl.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\solid_dynamics\polar_decomposition_3x3_matrix.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\solid_dynamics\slender_structure_dynamics.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\solid_dynamics\slender_structure_math.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_generator\all_particle_generators.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_generator\line_particle_generator.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_generator\particle_generator_network.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particles\all_particles.h" />
+    <ClInclude Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particles\linear_particles.h" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\adaptations\adaptation.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\base_body.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\base_body_part.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\body_partition.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\complex_bodies\tree_body.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\complex_bodies\unstructured_mesh.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\complex_bodies\unstructured_mesh2.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\observer_body.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\bodies\solid_body.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\body_relations\base_body_relation.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\body_relations\complex_body_relation.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\body_relations\contact_body_relation.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\body_relations\inner_body_relation.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\common\scalar_functions.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\common\vector_functions.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\geometries\base_geometry.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\geometries\complex_geometry.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\geometries\geometric_element.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\geometries\geometric_shape.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\geometries\level_set.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\geometries\level_set_shape.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\io_base.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\io_environment.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\io_log.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\io_observation.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\io_plt.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\io_simbody.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\io_vtk.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\io_vtk_mesh.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\io_system\parameterization.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\kernels\base_kernel.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\kernels\kernel_cubic_B_spline.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\kernels\kernel_hyperbolic.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\kernels\kernel_laguerre_gauss.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\kernels\kernel_quadratic.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\kernels\kernel_wendland_c2.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\mesh_dynamics\mesh_local_dynamics.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\base_mesh.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\meshes\cell_linked_list.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\active_muscle_dynamics\active_muscle_dynamics.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\configuration_dynamics\particle_sorting.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\continuum_dynamics\continuum_dynamics_variable.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\continuum_dynamics\continuum_integration.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\diffusion_reaction_dynamics\diffusion_dynamics.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\electro_physiology\electro_physiology.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\external_force\external_force.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\boundary_condition\fluid_boundary.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\boundary_condition\near_wall_boundary.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\boundary_condition\non_reflective_boundary.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\density_summation.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\eulerian_fluid_dynamics\eulerian_compressible_fluid_integration.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\eulerian_fluid_dynamics\eulerian_riemann_solver.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\fluid_integration.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\fluid_time_step.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\non_newtonian_dynamics\non_newtonian_dynamics.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\shape_confinement.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\surface_tension.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\velocity_gradient.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\fluid_dynamics\viscous_dynamics.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\boundary_condition\eulerian_ghost_boundary.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\boundary_condition\fvm_ghost_boundary.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\domian_bouding\domain_bounding.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\domian_bouding\ghost_bounding.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\general_constraint.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\general_geometric.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\general_interpolation.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\general_reduce.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\kernel_correction.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\surface_indication\smeared_surface_indication.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\general_dynamics\surface_indication\surface_indication.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\relax_dynamics\base_relax_dynamics.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\relax_dynamics\relax_stepping.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\relax_dynamics\relax_thick_shell.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\constraint_dynamics.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\contact_dynamics\contact_friction.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\contact_dynamics\contact_repulsion.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\contact_dynamics\repulsion_factor_summation.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\elastic_dynamics.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\fluid_structure_interaction.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\general_solid_dynamics.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\inelastic_dynamics.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\loading_dynamics.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\solid_dynamics_variable.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\thin_structure_dynamics.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_dynamics\solid_dynamics\thin_structure_math.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator\base_particle_generator.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator\particle_generator_lattice.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator\particle_generator_mesh.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_generator\particle_generator_mesh2.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particle_neighborhood\neighborhood.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particles\base_particles.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particles\particle_operation.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particles\particle_reserve.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\particles\surface_particles.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\base_material.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\complex_solid.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\compressible_fluid.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\diffusion_reaction.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\elastic_solid.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\general_continuum.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\inelastic_solid.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\riemann_solver.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\viscosity.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\physical_closure\materials\weakly_compressible_fluid.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\body_relation\neighbor_method.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\configuration_dynamics\particle_sort_ck.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics\continuum_dynamics_variable_ck.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\continum_dynamics\initialization_dynamics_ck.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\boundary_condition\bidirectional_boundary_ck.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\boundary_condition\fluid_boundary_state.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\fluid_dynamics\fluid_time_step_ck.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\force_prior_ck.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\general_reduce_ck.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\general_dynamics\geometric_dynamics.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\interaction_algorithms_ck.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\relax_dynamics\level_set_correction.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\relax_dynamics\relaxation_stepping_ck.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\solid_dynamics\derived_solid_state.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\particle_dynamics\sph_solver.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\shared_ck\smoothing_kernel\kernel_tabulated_ck.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys\body_part_for_simbody.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys\exception.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys\state_engine.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\simbody_sphinxsys\xml_engine.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\sphinxsys_system\sph_system.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\shared\tools\tinyxml2.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies\base_body_part_3d.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies\mesh_helper_3d.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies\mesh_helper_unv_3d.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies\unstructured_mesh2_3d.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\bodies\unstructured_mesh_3d.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\common\scalar_functions_3d.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\geometries\image_shape.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\geometries\triangle_mesh_shape.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\io_system\io_vtk_mesh_3d.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\materials\elastic_solid_3d.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\mesh_dynamics\mesh_local_dynamics_3d.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\base_mesh_3d.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\block_cluster_3d.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\cell_linked_list_3d.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\meshes\write_mesh_field_to_plt.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\general_dynamics\fvm_ghost_boundary_3d.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\solid_dynamics\slender_structure_dynamics.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\solid_dynamics\slender_structure_math.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\solid_dynamics\solid_dynamics_3d.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_dynamics\solid_dynamics\solid_dynamics_variable_3d.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_generator\base_particle_generator_3d.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_generator\line_particle_generator.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_generator\particle_generator_lattice_3d.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particle_generator\particle_generator_network.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\particles\linear_particles.cpp" />
+    <ClCompile Include="D:\WelSimLLC-github\SPHinXsys\src\for_3D_build\simbody_sphinxsys\body_part_for_simbody_3d.cpp" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\ZERO_CHECK.vcxproj">
+      <Project>{C3205D24-6AB4-30D4-AA2A-CD1CD698988A}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
