@@ -168,12 +168,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\ZERO_CHECK.vcxproj">
-      <Project>{C3205D24-6AB4-30D4-AA2A-CD1CD698988A}</Project>
-      <Name>ZERO_CHECK</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </ProjectReference>
     <ProjectReference Include="D:\WelSimLLC-github\SPHinXsys\msbuild\tests\modules\bernoulli_beam_struct_sim\bernoulli_beam_struct_sim.vcxproj">
       <Project>{50429B0C-47A6-33EB-AADC-F3422F6D6AAD}</Project>
       <Name>bernoulli_beam_struct_sim</Name>
