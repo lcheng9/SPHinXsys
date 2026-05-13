@@ -14,7 +14,7 @@ static string _group_labels[] = {"2417", "2429", "2430", "2432",
 
 static string _label_dataset = "2467";
 
-void unvMesh2417::read_stream(std::ifstream& in_stream, TDataSet& theDataSet)
+void unvMesh2417::read_stream(std::istream& in_stream, TDataSet& theDataSet)
 {
   if(!in_stream.good())
     EXCEPTION(runtime_error,"-=*Error: bad input file");
@@ -43,7 +43,7 @@ void unvMesh2417::read_stream(std::ifstream& in_stream, TDataSet& theDataSet)
 
 
 
-void unvMesh2417::read_stream_group(const std::string& myGroupLabel, std::ifstream& in_stream, TDataSet& theDataSet)
+void unvMesh2417::read_stream_group(const std::string& myGroupLabel, std::istream& in_stream, TDataSet& theDataSet)
 {
   TGroupId aId;
   for(; !in_stream.eof();){
@@ -108,7 +108,7 @@ void unvMesh2417::read_stream_group(const std::string& myGroupLabel, std::ifstre
 //Field 6 --active temperature set no. for group
 //Field 7 --active contact set no. for group
 //Field 8 --number of entities in group
-void unvMesh2417::write_stream(std::ofstream& out_stream, const TDataSet& theDataSet)
+void unvMesh2417::write_stream(std::ostream& out_stream, const TDataSet& theDataSet)
 {
   if(!out_stream.good())
     EXCEPTION(runtime_error,"-=*Error: bad output file");
@@ -179,72 +179,3 @@ void unvMesh2417::write_stream(std::ofstream& out_stream, const TDataSet& theDat
   out_stream<<"    -1\n";
 }
 
-void unvMesh2417::write_stream(std::ostream& out_stream, const TDataSet& theDataSet)
-{
-    if (!out_stream.good())
-        EXCEPTION(runtime_error, "-=*Error: bad output file");
-
-    /*
-    * Write beginning of dataset
-    */
-    out_stream << "    -1\n";
-    out_stream << "  " << _label_dataset << "\n";
-
-    TDataSet::const_iterator anIter = theDataSet.begin();
-    for (; anIter != theDataSet.end(); anIter++) {
-        const TGroupId& aLabel = anIter->first;
-        const UNVRecordData& aRec = anIter->second;
-        int aNbNodes = aRec.NodeList.size();
-        int aNbElements = aRec.ElementList.size();
-        int aNbRecords = aNbNodes + aNbElements;
-
-        out_stream << std::setw(9) << aLabel;  /* group ID */
-        out_stream << std::setw(6) << 0;
-        out_stream << std::setw(6) << 0;
-        out_stream << std::setw(6) << 0;
-        out_stream << std::setw(6) << 0;
-        out_stream << std::setw(6) << 0;
-        out_stream << std::setw(6) << 0;
-        out_stream << std::setw(10) << aNbRecords << std::endl;
-
-        // GroupName must be one single name
-        out_stream << aRec.GroupName << std::endl;
-        for (int i = 0; i < aRec.GroupName.size(); ++i) {
-            if (isspace(aRec.GroupName[i])) {
-                assert(0);
-                break;
-            }
-        }
-
-        int aRow = 0;
-        int i;
-        for (i = 0; i < aNbNodes; i++) {
-            if (aRow == 2) {
-                out_stream << std::endl;
-                aRow = 0;
-            }
-            out_stream << std::setw(6) << 7;
-            out_stream << std::setw(10) << aRec.NodeList[i];
-            out_stream << std::setw(6) << 0;
-            out_stream << std::setw(6) << 0;
-            aRow++;
-        }
-        for (i = 0; i < aNbElements; i++) {
-            if (aRow == 2) {
-                out_stream << std::endl;
-                aRow = 0;
-            }
-            out_stream << std::setw(6) << 8;
-            out_stream << std::setw(10) << aRec.ElementList[i];
-            out_stream << std::setw(6) << 0;
-            out_stream << std::setw(6) << 0;
-            aRow++;
-        }
-        out_stream << std::endl;
-    }
-
-    /*
-    * Write end of dataset
-    */
-    out_stream << "    -1\n";
-}

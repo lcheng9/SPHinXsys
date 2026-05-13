@@ -73,20 +73,13 @@ TransferFemMesh::Status TransferUNVWMDataWriteMesh::Execute(bool binary)
 
 TransferFemMesh::Status TransferUNVWMDataWriteMesh::executeBinary()
 {
-    //#ifdef WELSIM_MESH_BZIP2
-    //  std::ofstream out_stream(myFile.c_str(), std::ios::binary);
-    //  boost::iostreams::filtering_ostreambuf zdat;
-    //  zdat.push(boost::iostreams::bzip2_compressor());  // your compressor here
-    //  zdat.push(boost::iostreams::file_sink(myFile.c_str()));
-    //#endif
-
     Kernel_Utils::CLocalizer loc;
     Status aResult = DRS_OK;
 
     ogzstream out_stream(myFile.c_str());
 
     try {
-        // Units
+        // Unit System
         {
             using namespace unvMesh164;
             UNVRecordData aDataSet164;
@@ -101,8 +94,6 @@ TransferFemMesh::Status TransferUNVWMDataWriteMesh::executeBinary()
         {
             using namespace unvMesh2411;
             TDataSet aDataSet2411;
-            // Storing WMDS nodes to the UNV file
-            //-----------------------------------
             MESSAGE("Perform - myMesh->get_number_of_nodes() = " << myMesh->get_number_of_nodes());
             WMDataNodeIteratorPtr aNodesIter = myMesh->get_nodes_iterator();
             UNVRecordData aRec;
@@ -153,9 +144,7 @@ TransferFemMesh::Status TransferUNVWMDataWriteMesh::executeBinary()
                         aRec.node_labels.push_back(aNode0->get_elem_ID());
                         aRec.node_labels.push_back(aNode1->get_elem_ID());
                     }
-                    if (aRec.fe_descriptor_id > 0) {
-                        aDataSet2412.push_back(aRec);
-                    }
+                    aDataSet2412.push_back(aRec);
                 }
                 MESSAGE("Perform - aDataSet2412.size() = " << aDataSet2412.size());
             }
@@ -189,7 +178,6 @@ TransferFemMesh::Status TransferUNVWMDataWriteMesh::executeBinary()
                     case 4:
                     {
                         aRec.fe_descriptor_id = 44;
-                        assert(0);
                         while (aNodesIter->more())
                         {
                             const WMDataMeshNode* aNode = aNodesIter->next();
@@ -423,7 +411,7 @@ TransferFemMesh::Status TransferUNVWMDataWriteMesh::executeBinary()
             }
         }
 
-        // Boundary condition group
+        // bc group
         {
             using namespace unvMesh2417;
             if (myBCGroups.size() > 0)
@@ -466,7 +454,6 @@ TransferFemMesh::Status TransferUNVWMDataWriteMesh::executeBinary()
                 myBCGroups.clear();
             }
         }
-
 
         out_stream.flush();
         out_stream.close();
@@ -589,7 +576,6 @@ TransferFemMesh::Status TransferUNVWMDataWriteMesh::executeAscii()
                     case 4:
                     {
                         aRec.fe_descriptor_id = 44;
-                        assert(0);
                         while (aNodesIter->more())
                         {
                             const WMDataMeshNode* aNode = aNodesIter->next();

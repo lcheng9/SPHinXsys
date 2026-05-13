@@ -1,10 +1,11 @@
 #pragma once
 
-//#include "WMESH_TransferUNV.h"
+
 
 #include "../Transfer/TransferWMDataMesh.h"
 #include <map>
 #include <string>
+
 
 
 class WMDataMeshManager;
@@ -31,6 +32,7 @@ class TransferUNVWMDataReadMesh: public TransferWMDataMesh
 
 private:
     TransferFemMesh::Status executeAscii();
+    TransferFemMesh::Status executeBinary();
 
 
  private:
@@ -38,4 +40,5 @@ private:
   TGroupNamesMap myGroupNames;
   TGroupIdMap    myGroupId;
 };
+
 

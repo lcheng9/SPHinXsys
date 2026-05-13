@@ -171,17 +171,17 @@ unvMesh2412::UNVRecordData::UNVRecordData():
   beam_aft_end(1) // default values
 {}
 
-void unvMesh2412::read_stream(std::ifstream& in_stream, TDataSet& theDataSet)
+void unvMesh2412::read_stream(std::istream& in_stream, TDataSet& theDataSet)
 {
   if(!in_stream.good())
-    EXCEPTION(runtime_error,"Error: bad input file");
+    EXCEPTION(runtime_error,"-=*Error: bad input file");
 
   /*
    * adjust the \p istream to our
    * position
    */
   if(!beginning_of_dataset(in_stream,_label_dataset))
-    EXCEPTION(runtime_error,"Error: cannot find "<<_label_dataset<<" dataset!");
+    EXCEPTION(runtime_error,"-=*Error: cannot find "<<_label_dataset<<" dataset!");
 
   UNVRecordData aRec;
   while( !in_stream.eof())
@@ -211,11 +211,9 @@ void unvMesh2412::read_stream(std::ifstream& in_stream, TDataSet& theDataSet)
 
     theDataSet.push_back(aRec);
   }
-
 }
 
-
-void unvMesh2412::write_stream(std::ofstream& out_stream, const TDataSet& theDataSet)
+void unvMesh2412::write_stream(std::ostream& out_stream, const TDataSet& theDataSet)
 {
   if(!out_stream.good())
     EXCEPTION(runtime_error,"-=*Error: bad output file");
@@ -264,57 +262,6 @@ void unvMesh2412::write_stream(std::ofstream& out_stream, const TDataSet& theDat
    */
   out_stream<<"    -1\n";
 }
-
-void unvMesh2412::write_stream(std::ostream& out_stream, const TDataSet& theDataSet)
-{
-    if (!out_stream.good())
-        EXCEPTION(runtime_error, "-=*Error: bad output file");
-
-    /*
-    * Write beginning of dataset
-    */
-    out_stream << "    -1\n";
-    out_stream << "  " << _label_dataset << "\n";
-
-    TDataSet::const_iterator anIter = theDataSet.begin();
-    for (; anIter != theDataSet.end(); anIter++)
-    {
-        const UNVRecordData& aRec = *anIter;
-        out_stream << std::setw(10) << aRec.label;  /* element ID */
-        out_stream << std::setw(10) << aRec.fe_descriptor_id;  /* type of element */
-        out_stream << std::setw(10) << aRec.phys_prop_tab_num;
-        out_stream << std::setw(10) << aRec.mat_prop_tab_num;
-        out_stream << std::setw(10) << aRec.color;
-        out_stream << std::setw(10) << aRec.node_labels.size() << std::endl;  /* No. of nodes per element */
-
-        if (is_beam_element(aRec.fe_descriptor_id))
-        {
-            out_stream << std::setw(10) << aRec.beam_orientation;
-            out_stream << std::setw(10) << aRec.beam_fore_end;
-            out_stream << std::setw(10) << aRec.beam_aft_end << std::endl;
-        }
-
-        int n_nodes = aRec.node_labels.size();
-        int iEnd = (n_nodes - 1) / 8 + 1;
-        for (int i = 0, k = 0; i < iEnd; i++) {
-            int jEnd = n_nodes - 8 * (i + 1);
-            if (jEnd < 0)
-                jEnd = 8 + jEnd;
-            else
-                jEnd = 8;
-            for (int j = 0; j < jEnd; k++, j++) {
-                out_stream << std::setw(10) << aRec.node_labels[k];
-            }
-            out_stream << std::endl;
-        }
-    }
-
-    /*
-    * Write end of dataset
-    */
-    out_stream << "    -1\n";
-}
-
 
 bool unvMesh2412::is_beam_element(int theFeDescriptorId){
   switch (theFeDescriptorId){

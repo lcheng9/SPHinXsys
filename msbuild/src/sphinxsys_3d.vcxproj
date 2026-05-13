@@ -77,10 +77,10 @@
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:/WelSimLLC/CodeDV/libPack/include;$(IncludePath)</IncludePath>
+    <IncludePath>D:/WelSimLLC/CodeDV/libPack/include;D:\WelSimLLC\CodeDV\libPack\include\simbody;for_3D_build\bodies;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>D:/WelSimLLC/CodeDV/libPack/include;$(IncludePath)</IncludePath>
+    <IncludePath>D:/WelSimLLC/CodeDV/libPack/include;D:\WelSimLLC\CodeDV\libPack\include\simbody;for_3D_build\bodies;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -111,7 +111,7 @@
       <TreatWChar_tAsBuiltInType>
       </TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_USE_MATH_DEFINES;NOMINMAX;SPHINXSYS_USE_SYCL=0;SPHINXSYS_USE_FLOAT=0;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;BOOST_AVAILABLE;TBB_USE_DEBUG;SPDLOG_FMT_EXTERNAL;SPDLOG_FWRITE_UNLOCKED;FMT_SHARED;GTEST_LINKED_AS_SHARED_LIBRARY=1;CMAKE_INTDIR="Debug";BOOST_ALL_DYN_LINK</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_USE_MATH_DEFINES;NOMINMAX;SPHINXSYS_USE_SYCL=0;SPHINXSYS_USE_FLOAT=0;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;BOOST_AVAILABLE;TBB_USE_DEBUG;SPDLOG_FMT_EXTERNAL;SPDLOG_FWRITE_UNLOCKED;FMT_HEADER_ONLY;GTEST_LINKED_AS_SHARED_LIBRARY=1;CMAKE_INTDIR="Debug";BOOST_ALL_DYN_LINK</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
@@ -158,7 +158,7 @@
       <TreatWChar_tAsBuiltInType>
       </TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;SPHINXSYS_USE_SYCL=0;SPHINXSYS_USE_FLOAT=0;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;BOOST_AVAILABLE;SPDLOG_FMT_EXTERNAL;SPDLOG_FWRITE_UNLOCKED;FMT_SHARED;GTEST_LINKED_AS_SHARED_LIBRARY=1;CMAKE_INTDIR="Release";BOOST_ALL_DYN_LINK</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;SPHINXSYS_USE_SYCL=0;SPHINXSYS_USE_FLOAT=0;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;BOOST_AVAILABLE;SPDLOG_FMT_EXTERNAL;SPDLOG_FWRITE_UNLOCKED;FMT_HEADER_ONLY;GTEST_LINKED_AS_SHARED_LIBRARY=1;CMAKE_INTDIR="Release";BOOST_ALL_DYN_LINK</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>

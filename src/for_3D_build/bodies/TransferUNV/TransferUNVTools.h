@@ -103,7 +103,7 @@ namespace unvMesh{
    *  which is necessary after reading using >> operator
    *  \retval std::string - the result line
    */
-  inline std::string read_line(std::ifstream& in_stream, const bool next=true)
+  inline std::string read_line(std::istream& in_stream, const bool next=true)
   {
     std::string resLine;
     std::getline( in_stream, resLine );

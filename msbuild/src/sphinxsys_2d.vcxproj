@@ -77,10 +77,10 @@
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>D:\WelSimLLC\CodeDV\libPack\include;$(IncludePath)</IncludePath>
+    <IncludePath>D:\WelSimLLC\CodeDV\libPack\include;D:\WelSimLLC\CodeDV\libPack\include\simbody;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:\WelSimLLC\CodeDV\libPack\include;$(IncludePath)</IncludePath>
+    <IncludePath>D:\WelSimLLC\CodeDV\libPack\include;D:\WelSimLLC\CodeDV\libPack\include\simbody;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>

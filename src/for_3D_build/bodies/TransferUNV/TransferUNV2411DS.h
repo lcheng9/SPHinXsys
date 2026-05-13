@@ -20,9 +20,8 @@ namespace unvMesh2411{
   
   typedef std::vector<UNVRecordData> TDataSet;
 
-  void read_stream(std::ifstream& in_stream, TDataSet& theDataSet);
-
-  void write_stream(std::ofstream& out_stream, const TDataSet& theDataSet);
+  void read_stream(std::istream& in_stream, TDataSet& theDataSet);
   void write_stream(std::ostream& out_stream, const TDataSet& theDataSet);
+
 };
 

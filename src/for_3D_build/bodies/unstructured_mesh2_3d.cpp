@@ -5,12 +5,12 @@
 
 #include <filesystem>
 #include <algorithm>
-#include "TransferUNV/TransferUNV164DS.h"
-#include "TransferUNV/TransferUNV2411DS.h"
-#include "TransferUNV/TransferUNV2412DS.h"
-#include "TransferUNV/TransferUNV2417DS.h"
-#include "TransferUNV/TransferUNV2420DS.h"
-#include "TransferUNV/TransferUNVTools.h"
+//#include "TransferUNV/TransferUNV164DS.h"
+//#include "TransferUNV/TransferUNV2411DS.h"
+//#include "TransferUNV/TransferUNV2412DS.h"
+//#include "TransferUNV/TransferUNV2417DS.h"
+//#include "TransferUNV/TransferUNV2420DS.h"
+//#include "TransferUNV/TransferUNVTools.h"
 
 
 namespace fs = std::filesystem;
@@ -78,46 +78,46 @@ bool containsAllElements(const std::vector<size_t> &smaller_vec, const std::vect
 /*!
  * \brief Move node coordinates to the global Cartesian CS
  */
-void transformNodes(unvMesh2411::TDataSet::const_iterator fromNode,
-                    unvMesh2411::TDataSet::const_iterator endNode,
-                    const unvMesh2420::UNVRecordData &csRecord)
-{
-    const int csLabel = fromNode->exp_coord_sys_num;
-
-    unvMesh2411::TDataSet::const_iterator nodeIt;
-
-    // apply Transformation Matrix
-    if (!csRecord.is_identity_tensor())
-    {
-        for (nodeIt = fromNode; nodeIt != endNode; ++nodeIt)
-        {
-            const unvMesh2411::UNVRecordData &nodeRec = *nodeIt;
-            if (nodeRec.exp_coord_sys_num == csLabel)
-                csRecord.modify_by_tensor((double *)nodeRec.coord);
-        }
-    }
-
-    // transform from Cylindrical CS
-    if (csRecord.coord_sys_type == unvMesh2420::Cylindrical)
-    {
-        for (nodeIt = fromNode; nodeIt != endNode; ++nodeIt)
-        {
-            const unvMesh2411::UNVRecordData &nodeRec = *nodeIt;
-            if (nodeRec.exp_coord_sys_num == csLabel)
-                csRecord.convert_by_CCS((double *)nodeRec.coord);
-        }
-    }
-    // transform from Spherical CS
-    else if (csRecord.coord_sys_type == unvMesh2420::Spherical)
-    {
-        for (nodeIt = fromNode; nodeIt != endNode; ++nodeIt)
-        {
-            const unvMesh2411::UNVRecordData &nodeRec = *nodeIt;
-            if (nodeRec.exp_coord_sys_num == csLabel)
-                csRecord.convert_by_SCS((double *)nodeRec.coord);
-        }
-    }
-}
+//void transformNodes(unvMesh2411::TDataSet::const_iterator fromNode,
+//                    unvMesh2411::TDataSet::const_iterator endNode,
+//                    const unvMesh2420::UNVRecordData &csRecord)
+//{
+//    const int csLabel = fromNode->exp_coord_sys_num;
+//
+//    unvMesh2411::TDataSet::const_iterator nodeIt;
+//
+//    // apply Transformation Matrix
+//    if (!csRecord.is_identity_tensor())
+//    {
+//        for (nodeIt = fromNode; nodeIt != endNode; ++nodeIt)
+//        {
+//            const unvMesh2411::UNVRecordData &nodeRec = *nodeIt;
+//            if (nodeRec.exp_coord_sys_num == csLabel)
+//                csRecord.modify_by_tensor((double *)nodeRec.coord);
+//        }
+//    }
+//
+//    // transform from Cylindrical CS
+//    if (csRecord.coord_sys_type == unvMesh2420::Cylindrical)
+//    {
+//        for (nodeIt = fromNode; nodeIt != endNode; ++nodeIt)
+//        {
+//            const unvMesh2411::UNVRecordData &nodeRec = *nodeIt;
+//            if (nodeRec.exp_coord_sys_num == csLabel)
+//                csRecord.convert_by_CCS((double *)nodeRec.coord);
+//        }
+//    }
+//    // transform from Spherical CS
+//    else if (csRecord.coord_sys_type == unvMesh2420::Spherical)
+//    {
+//        for (nodeIt = fromNode; nodeIt != endNode; ++nodeIt)
+//        {
+//            const unvMesh2411::UNVRecordData &nodeRec = *nodeIt;
+//            if (nodeRec.exp_coord_sys_num == csLabel)
+//                csRecord.convert_by_SCS((double *)nodeRec.coord);
+//        }
+//    }
+//}
 
 ANSYSMesh2::ANSYSMesh2()
 {
@@ -305,315 +305,316 @@ void ANSYSMesh2::getDataFromUnvFile(const std::string &full_path)
     {
         std::cout << "Error:Check if the file exists." << std::endl;
     }
+	
+	assert(0);
+    //try
+    //{
+    //    size_t dimension = 3;
+    //    size_t mesh_type = 4; // unstructured, tet4
 
-    try
-    {
-        size_t dimension = 3;
-        size_t mesh_type = 4; // unstructured, tet4
+    //    {
+    //        // Read Units
+    //        unvMesh164::UNVRecordData aUnitsRecord;
+    //        unvMesh164::read_stream(in_stream, aUnitsRecord);
 
-        {
-            // Read Units
-            unvMesh164::UNVRecordData aUnitsRecord;
-            unvMesh164::read_stream(in_stream, aUnitsRecord);
+    //        // Read Coordinate systems
+    //        std::string myMeshName;
+    //        unvMesh2420::TDataSet aCoordSysDataSet;
+    //        unvMesh2420::read_stream(in_stream, myMeshName, aCoordSysDataSet);
 
-            // Read Coordinate systems
-            std::string myMeshName;
-            unvMesh2420::TDataSet aCoordSysDataSet;
-            unvMesh2420::read_stream(in_stream, myMeshName, aCoordSysDataSet);
+    //        // Read nodes
+    //        using namespace unvMesh2411;
+    //        TDataSet aDataSet2411;
+    //        unvMesh2411::read_stream(in_stream, aDataSet2411);
 
-            // Read nodes
-            using namespace unvMesh2411;
-            TDataSet aDataSet2411;
-            unvMesh2411::read_stream(in_stream, aDataSet2411);
+    //        // Move nodes in a global CS
+    //        if (!aCoordSysDataSet.empty())
+    //        {
+    //            unvMesh2420::TDataSet::const_iterator csIter = aCoordSysDataSet.begin();
+    //            for (; csIter != aCoordSysDataSet.end(); ++csIter)
+    //            {
+    //                // find any node in this CS
+    //                TDataSet::const_iterator nodeIter = aDataSet2411.begin();
+    //                for (; nodeIter != aDataSet2411.end(); nodeIter++)
+    //                    if (nodeIter->exp_coord_sys_num == csIter->coord_sys_label)
+    //                    {
+    //                        transformNodes(nodeIter, aDataSet2411.end(), *csIter);
+    //                        break;
+    //                    }
+    //            }
+    //        }
+    //        // Move nodes to SI unit system
+    //        const double lenFactor = aUnitsRecord.factors[unvMesh164::LENGTH_FACTOR];
+    //        if (lenFactor != 1.)
+    //        {
+    //            TDataSet::iterator nodeIter = aDataSet2411.begin(), nodeEnd;
+    //            for (nodeEnd = aDataSet2411.end(); nodeIter != nodeEnd; nodeIter++)
+    //            {
+    //                unvMesh2411::UNVRecordData &nodeRec = *nodeIter;
+    //                nodeRec.coord[0] *= lenFactor;
+    //                nodeRec.coord[1] *= lenFactor;
+    //                nodeRec.coord[2] *= lenFactor;
+    //            }
+    //        }
 
-            // Move nodes in a global CS
-            if (!aCoordSysDataSet.empty())
-            {
-                unvMesh2420::TDataSet::const_iterator csIter = aCoordSysDataSet.begin();
-                for (; csIter != aCoordSysDataSet.end(); ++csIter)
-                {
-                    // find any node in this CS
-                    TDataSet::const_iterator nodeIter = aDataSet2411.begin();
-                    for (; nodeIter != aDataSet2411.end(); nodeIter++)
-                        if (nodeIter->exp_coord_sys_num == csIter->coord_sys_label)
-                        {
-                            transformNodes(nodeIter, aDataSet2411.end(), *csIter);
-                            break;
-                        }
-                }
-            }
-            // Move nodes to SI unit system
-            const double lenFactor = aUnitsRecord.factors[unvMesh164::LENGTH_FACTOR];
-            if (lenFactor != 1.)
-            {
-                TDataSet::iterator nodeIter = aDataSet2411.begin(), nodeEnd;
-                for (nodeEnd = aDataSet2411.end(); nodeIter != nodeEnd; nodeIter++)
-                {
-                    unvMesh2411::UNVRecordData &nodeRec = *nodeIter;
-                    nodeRec.coord[0] *= lenFactor;
-                    nodeRec.coord[1] *= lenFactor;
-                    nodeRec.coord[2] *= lenFactor;
-                }
-            }
+    //        // Create nodes in the mesh
+    //        Vecd Coords = {0., 0., 0.};
+    //        node_coordinates_.push_back(Coords); // dummy for 1-based vector
+    //        TDataSet::const_iterator anIter = aDataSet2411.begin();
+    //        for (; anIter != aDataSet2411.end(); anIter++)
+    //        {
+    //            const UNVRecordData &aRec = *anIter;
+    //            // myMesh->add_node_and_id(aRec.coord[0], aRec.coord[1], aRec.coord[2], aRec.label);
+    //            Vecd Coords = Vecd::Zero();
+    //            for (unsigned int i = 0; i < 3; ++i)
+    //                Coords[i] = aRec.coord[i];
+    //            node_coordinates_.push_back(Coords);
+    //        }
+    //    }
 
-            // Create nodes in the mesh
-            Vecd Coords = {0., 0., 0.};
-            node_coordinates_.push_back(Coords); // dummy for 1-based vector
-            TDataSet::const_iterator anIter = aDataSet2411.begin();
-            for (; anIter != aDataSet2411.end(); anIter++)
-            {
-                const UNVRecordData &aRec = *anIter;
-                // myMesh->add_node_and_id(aRec.coord[0], aRec.coord[1], aRec.coord[2], aRec.label);
-                Vecd Coords = Vecd::Zero();
-                for (unsigned int i = 0; i < 3; ++i)
-                    Coords[i] = aRec.coord[i];
-                node_coordinates_.push_back(Coords);
-            }
-        }
+    //   
 
-       
+    //    {
+    //        using namespace unvMesh2412;
+    //        TDataSet aDataSet2412;
+    //        unvMesh2412::read_stream(in_stream, aDataSet2412);
+    //        unsigned int number_of_elements = 0;
+    //        for (TDataSet::const_iterator anIter = aDataSet2412.begin(); anIter != aDataSet2412.end(); anIter++)
+    //        {
+    //            const UNVRecordData &aRec = *anIter;
+    //            if (is_body_element(aRec.fe_descriptor_id))
+    //                number_of_elements++;
+    //        }
+    //        /*Preparing and initializing the data structure of mesh topology and element node connection*/
+    //        MeshFileHelpers::dataStruct(mesh_topology_, elements_nodes_connection_, number_of_elements, mesh_type, dimension);
 
-        {
-            using namespace unvMesh2412;
-            TDataSet aDataSet2412;
-            unvMesh2412::read_stream(in_stream, aDataSet2412);
-            unsigned int number_of_elements = 0;
-            for (TDataSet::const_iterator anIter = aDataSet2412.begin(); anIter != aDataSet2412.end(); anIter++)
-            {
-                const UNVRecordData &aRec = *anIter;
-                if (is_body_element(aRec.fe_descriptor_id))
-                    number_of_elements++;
-            }
-            /*Preparing and initializing the data structure of mesh topology and element node connection*/
-            MeshFileHelpers::dataStruct(mesh_topology_, elements_nodes_connection_, number_of_elements, mesh_type, dimension);
+    //        unsigned long long count = 1; // 1-based
+    //        for (TDataSet::const_iterator anIter = aDataSet2412.begin(); anIter != aDataSet2412.end(); anIter++)
+    //        {
+    //            //WMDataMeshElem *anElement = NULL;
+    //            const UNVRecordData &aRec = *anIter;
+    //            if (is_beam_element(aRec.fe_descriptor_id))
+    //            {
+    //                continue;
+    //                switch (aRec.node_labels.size())
+    //                {
+    //                case 2:
+    //                    elements_nodes_connection_.push_back({aRec.node_labels[0], aRec.node_labels[1]});
+    //                    break;
+    //                case 3:
+    //                    elements_nodes_connection_.push_back({aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[2]});
+    //                    break;
+    //                default:
+    //                    break;
+    //                }
+    //            }
+    //            else if (is_face_element(aRec.fe_descriptor_id))
+    //            {
+    //                continue;
+    //                switch (aRec.fe_descriptor_id)
+    //                {
+    //                case 41: // Plane Stress Linear Triangle
+    //                case 51: // Plane Strain Linear Triangle
+    //                case 61: // Plate Linear Triangle
+    //                case 74: // Membrane Linear Triangle
+    //                case 81: // Axisymetric Solid Linear Triangle
+    //                case 91: // Thin Shell Linear Triangle
+    //                    elements_nodes_connection_.push_back({aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[2]});
+    //                    break;
 
-            unsigned long long count = 1; // 1-based
-            for (TDataSet::const_iterator anIter = aDataSet2412.begin(); anIter != aDataSet2412.end(); anIter++)
-            {
-                //WMDataMeshElem *anElement = NULL;
-                const UNVRecordData &aRec = *anIter;
-                if (is_beam_element(aRec.fe_descriptor_id))
-                {
-                    continue;
-                    switch (aRec.node_labels.size())
-                    {
-                    case 2:
-                        elements_nodes_connection_.push_back({aRec.node_labels[0], aRec.node_labels[1]});
-                        break;
-                    case 3:
-                        elements_nodes_connection_.push_back({aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[2]});
-                        break;
-                    default:
-                        break;
-                    }
-                }
-                else if (is_face_element(aRec.fe_descriptor_id))
-                {
-                    continue;
-                    switch (aRec.fe_descriptor_id)
-                    {
-                    case 41: // Plane Stress Linear Triangle
-                    case 51: // Plane Strain Linear Triangle
-                    case 61: // Plate Linear Triangle
-                    case 74: // Membrane Linear Triangle
-                    case 81: // Axisymetric Solid Linear Triangle
-                    case 91: // Thin Shell Linear Triangle
-                        elements_nodes_connection_.push_back({aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[2]});
-                        break;
+    //                case 42: //  Plane Stress Parabolic Triangle
+    //                case 52: //  Plane Strain Parabolic Triangle
+    //                case 62: //  Plate Parabolic Triangle
+    //                case 72: //  Membrane Parabolic Triangle
+    //                case 82: //  Axisymetric Solid Parabolic Triangle
+    //                case 92: //  Thin Shell Parabolic Triangle
+    //                    elements_nodes_connection_.push_back({ aRec.node_labels[0], aRec.node_labels[2], aRec.node_labels[4],
+    //                                                           aRec.node_labels[1], aRec.node_labels[3], aRec.node_labels[5]});
+    //                    break;
 
-                    case 42: //  Plane Stress Parabolic Triangle
-                    case 52: //  Plane Strain Parabolic Triangle
-                    case 62: //  Plate Parabolic Triangle
-                    case 72: //  Membrane Parabolic Triangle
-                    case 82: //  Axisymetric Solid Parabolic Triangle
-                    case 92: //  Thin Shell Parabolic Triangle
-                        elements_nodes_connection_.push_back({ aRec.node_labels[0], aRec.node_labels[2], aRec.node_labels[4],
-                                                               aRec.node_labels[1], aRec.node_labels[3], aRec.node_labels[5]});
-                        break;
+    //                case 44: // Plane Stress Linear Quadrilateral
+    //                case 54: // Plane Strain Linear Quadrilateral
+    //                case 64: // Plate Linear Quadrilateral
+    //                case 71: // Membrane Linear Quadrilateral
+    //                case 84: // Axisymetric Solid Linear Quadrilateral
+    //                case 94: // Thin Shell Linear Quadrilateral
+    //                    elements_nodes_connection_.push_back({aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[2], aRec.node_labels[3]});
+    //                    break;
 
-                    case 44: // Plane Stress Linear Quadrilateral
-                    case 54: // Plane Strain Linear Quadrilateral
-                    case 64: // Plate Linear Quadrilateral
-                    case 71: // Membrane Linear Quadrilateral
-                    case 84: // Axisymetric Solid Linear Quadrilateral
-                    case 94: // Thin Shell Linear Quadrilateral
-                        elements_nodes_connection_.push_back({aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[2], aRec.node_labels[3]});
-                        break;
+    //                case 45: // Plane Stress Parabolic Quadrilateral
+    //                case 55: // Plane Strain Parabolic Quadrilateral
+    //                case 65: // Plate Parabolic Quadrilateral
+    //                case 75: // Membrane Parabolic Quadrilateral
+    //                case 85: // Axisymetric Solid Parabolic Quadrilateral
+    //                case 95: // Thin Shell Parabolic Quadrilateral
+    //                    if (aRec.node_labels.size() == 9)
+    //                    {
+    //                        assert(0);
+    //                        // anElement = myMesh->add_face_and_id(aRec.node_labels[0],
+    //                        //     aRec.node_labels[2],
+    //                        //     aRec.node_labels[4],
+    //                        //     aRec.node_labels[6],
+    //                        //     aRec.node_labels[1],
+    //                        //     aRec.node_labels[3],
+    //                        //     aRec.node_labels[5],
+    //                        //     aRec.node_labels[7],
+    //                        //     aRec.node_labels[8],
+    //                        //     aRec.label);
+    //                    }
+    //                    else
+    //                    {
+    //                        elements_nodes_connection_.push_back({aRec.node_labels[0], aRec.node_labels[2], aRec.node_labels[4], aRec.node_labels[6],
+    //                                                              aRec.node_labels[1], aRec.node_labels[3], aRec.node_labels[5], aRec.node_labels[7]});
+    //                    }
+    //                    break;
+    //                }
+    //            }
+    //            else if (is_body_element(aRec.fe_descriptor_id))
+    //            {
+    //                switch (aRec.fe_descriptor_id)
+    //                {
+    //                case 111: // Solid Linear Tetrahedron - TET4
+    //                {
+    //                    std::vector<size_t> elemNodes = {aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[2], aRec.node_labels[3]};
+    //                    elements_nodes_connection_[count] = elemNodes;
 
-                    case 45: // Plane Stress Parabolic Quadrilateral
-                    case 55: // Plane Strain Parabolic Quadrilateral
-                    case 65: // Plate Parabolic Quadrilateral
-                    case 75: // Membrane Parabolic Quadrilateral
-                    case 85: // Axisymetric Solid Parabolic Quadrilateral
-                    case 95: // Thin Shell Parabolic Quadrilateral
-                        if (aRec.node_labels.size() == 9)
-                        {
-                            assert(0);
-                            // anElement = myMesh->add_face_and_id(aRec.node_labels[0],
-                            //     aRec.node_labels[2],
-                            //     aRec.node_labels[4],
-                            //     aRec.node_labels[6],
-                            //     aRec.node_labels[1],
-                            //     aRec.node_labels[3],
-                            //     aRec.node_labels[5],
-                            //     aRec.node_labels[7],
-                            //     aRec.node_labels[8],
-                            //     aRec.label);
-                        }
-                        else
-                        {
-                            elements_nodes_connection_.push_back({aRec.node_labels[0], aRec.node_labels[2], aRec.node_labels[4], aRec.node_labels[6],
-                                                                  aRec.node_labels[1], aRec.node_labels[3], aRec.node_labels[5], aRec.node_labels[7]});
-                        }
-                        break;
-                    }
-                }
-                else if (is_body_element(aRec.fe_descriptor_id))
-                {
-                    switch (aRec.fe_descriptor_id)
-                    {
-                    case 111: // Solid Linear Tetrahedron - TET4
-                    {
-                        std::vector<size_t> elemNodes = {aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[2], aRec.node_labels[3]};
-                        elements_nodes_connection_[count] = elemNodes;
+    //                    // fill the first cell data
+    //                    std::vector<std::vector<size_t>> faces;
+    //                    faces.push_back({elemNodes[0], elemNodes[1], elemNodes[2]});
+    //                    faces.push_back({elemNodes[0], elemNodes[1], elemNodes[3]});
+    //                    faces.push_back({elemNodes[1], elemNodes[2], elemNodes[3]});
+    //                    faces.push_back({elemNodes[0], elemNodes[2], elemNodes[3]});
+    //                    //if (count == 1)
+    //                    {
+    //                        mesh_topology_[1][0] = {0, 3, faces[0][0], faces[0][1], faces[0][2]};
+    //                        mesh_topology_[1][1] = {0, 3, faces[1][0], faces[1][1], faces[1][2]};
+    //                        mesh_topology_[1][2] = {0, 3, faces[2][0], faces[2][1], faces[2][2]};
+    //                        mesh_topology_[1][3] = {0, 3, faces[3][0], faces[3][1], faces[3][2]};
+    //                    }
 
-                        // fill the first cell data
-                        std::vector<std::vector<size_t>> faces;
-                        faces.push_back({elemNodes[0], elemNodes[1], elemNodes[2]});
-                        faces.push_back({elemNodes[0], elemNodes[1], elemNodes[3]});
-                        faces.push_back({elemNodes[1], elemNodes[2], elemNodes[3]});
-                        faces.push_back({elemNodes[0], elemNodes[2], elemNodes[3]});
-                        //if (count == 1)
-                        {
-                            mesh_topology_[1][0] = {0, 3, faces[0][0], faces[0][1], faces[0][2]};
-                            mesh_topology_[1][1] = {0, 3, faces[1][0], faces[1][1], faces[1][2]};
-                            mesh_topology_[1][2] = {0, 3, faces[2][0], faces[2][1], faces[2][2]};
-                            mesh_topology_[1][3] = {0, 3, faces[3][0], faces[3][1], faces[3][2]};
-                        }
+    //                    //parallel_for(IndexRange(1, count), [&](const IndexRange &r)
+    //                    //{
+    //                    //    for (unsigned int i = r.begin(); i != r.end(); ++i) // all processed elements
+    //                    //    {
+    //                    //        const std::vector<size_t> &curElemNodes = elements_nodes_connection_[i];
+    //                    //        for (unsigned int j = 0; j < mesh_topology_[count].size(); ++j) // 4 faces for tet
+    //                    //        {
+    //                    //            if (mesh_topology_[i][j][1] == 2) // already found the neighber element
+    //                    //                continue;
 
-                        //parallel_for(IndexRange(1, count), [&](const IndexRange &r)
-                        //{
-                        //    for (unsigned int i = r.begin(); i != r.end(); ++i) // all processed elements
-                        //    {
-                        //        const std::vector<size_t> &curElemNodes = elements_nodes_connection_[i];
-                        //        for (unsigned int j = 0; j < mesh_topology_[count].size(); ++j) // 4 faces for tet
-                        //        {
-                        //            if (mesh_topology_[i][j][1] == 2) // already found the neighber element
-                        //                continue;
-
-                        //            int idxSub = IsTetSubset(curElemNodes, faces[j]);
-                        //            if (idxSub == -1)
-                        //            {
-                        //                mesh_topology_[count][j] = {0, 3, faces[j][0], faces[j][1], faces[j][2]};
-                        //            }
-                        //            else
-                        //            {
-                        //                mesh_topology_[count][j] = {i, 2, faces[j][0], faces[j][1], faces[j][2]};
-                        //                mesh_topology_[i][idxSub][0] = count;
-                        //                mesh_topology_[i][idxSub][1] = 2;
-                        //            }
-                        //        }
-                        //    } 
-                        //},
-                        //ap);
-                    }
-                    break;
-                    case 118: // Solid Quadratic Tetrahedron - TET10
-                    {
-                        assert(0);
-                        elements_nodes_connection_[count] = {aRec.node_labels[0], aRec.node_labels[2], aRec.node_labels[4],
-                                                              aRec.node_labels[9],
-                                                              aRec.node_labels[1], aRec.node_labels[3], aRec.node_labels[5],
-                                                              aRec.node_labels[6], aRec.node_labels[7], aRec.node_labels[8]};
-                        mesh_topology_[count][0] = {0, 2, aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[2]};
-                        mesh_topology_[count][1] = {0, 2, aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[3]};
-                        mesh_topology_[count][2] = {0, 2, aRec.node_labels[1], aRec.node_labels[2], aRec.node_labels[3]};
-                        mesh_topology_[count][3] = {0, 2, aRec.node_labels[0], aRec.node_labels[2], aRec.node_labels[3]};
-                    }
-                    break;
-                    case 112: // Solid Linear Prism - PRISM6
-                    {
-                        assert(0);
-                        elements_nodes_connection_[count] = {aRec.node_labels[0], aRec.node_labels[2], aRec.node_labels[1],
-                                                              aRec.node_labels[3], aRec.node_labels[5], aRec.node_labels[4]};
-                        //mesh_topology_[count][0] = {0, 2, aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[2], aRec.node_labels[3]};
-                        //mesh_topology_[count][1] = {0, 2, aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[4], aRec.node_labels[5]};
-                        //mesh_topology_[count][2] = {0, 2, aRec.node_labels[1], aRec.node_labels[2], aRec.node_labels[5], aRec.node_labels[6]};
-                        //mesh_topology_[count][3] = {0, 2, aRec.node_labels[2], aRec.node_labels[3], aRec.node_labels[6], aRec.node_labels[7]};
-                        //mesh_topology_[count][4] = {0, 2, aRec.node_labels[0], aRec.node_labels[3], aRec.node_labels[4], aRec.node_labels[7]};
-                        //mesh_topology_[count][5] = {0, 2, aRec.node_labels[4], aRec.node_labels[5], aRec.node_labels[6], aRec.node_labels[7]};
-                    }
-                    break;
-                    case 113: // Solid Quadratic Prism - PRISM15
-                    {
-                        assert(0);
-                        elements_nodes_connection_[count] = {aRec.node_labels[0], aRec.node_labels[4], aRec.node_labels[2],
-                                                              aRec.node_labels[9], aRec.node_labels[13], aRec.node_labels[11],
-                                                              aRec.node_labels[5], aRec.node_labels[3], aRec.node_labels[1],
-                                                              aRec.node_labels[14], aRec.node_labels[12], aRec.node_labels[10],
-                                                              aRec.node_labels[6], aRec.node_labels[8], aRec.node_labels[7]};
-                        //mesh_topology_[count] = {};
-                    }
-                    break;
-                    case 115: // Solid Linear Brick - HEX8
-                    {
-                        elements_nodes_connection_[count] = {aRec.node_labels[0], aRec.node_labels[3], aRec.node_labels[2],
-                                                              aRec.node_labels[1], aRec.node_labels[4], aRec.node_labels[7],
-                                                              aRec.node_labels[6], aRec.node_labels[5]};
-                        mesh_topology_[count][0] = {0, 2, aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[2], aRec.node_labels[3]};
-                        mesh_topology_[count][1] = {0, 2, aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[4], aRec.node_labels[5]};
-                        mesh_topology_[count][2] = {0, 2, aRec.node_labels[1], aRec.node_labels[2], aRec.node_labels[5], aRec.node_labels[6]};
-                        mesh_topology_[count][3] = {0, 2, aRec.node_labels[2], aRec.node_labels[3], aRec.node_labels[6], aRec.node_labels[7]};
-                        mesh_topology_[count][4] = {0, 2, aRec.node_labels[0], aRec.node_labels[3], aRec.node_labels[4], aRec.node_labels[7]};
-                        mesh_topology_[count][5] = {0, 2, aRec.node_labels[4], aRec.node_labels[5], aRec.node_labels[6], aRec.node_labels[7]};
-                    }
-                    break;
-                    case 116: // Solid Quadratic Brick - HEX20
-                    {
-                        elements_nodes_connection_[count] = {aRec.node_labels[0], aRec.node_labels[6], aRec.node_labels[4], aRec.node_labels[2],
-                                                              aRec.node_labels[12], aRec.node_labels[18], aRec.node_labels[16], aRec.node_labels[14],
-                                                              aRec.node_labels[7], aRec.node_labels[5], aRec.node_labels[3], aRec.node_labels[1],
-                                                              aRec.node_labels[19], aRec.node_labels[17], aRec.node_labels[15], aRec.node_labels[13],
-                                                              aRec.node_labels[8], aRec.node_labels[11], aRec.node_labels[10], aRec.node_labels[9]};
-                        mesh_topology_[count][0] = {0, 2, aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[2], aRec.node_labels[3]};
-                        mesh_topology_[count][1] = {0, 2, aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[4], aRec.node_labels[5]};
-                        mesh_topology_[count][2] = {0, 2, aRec.node_labels[1], aRec.node_labels[2], aRec.node_labels[5], aRec.node_labels[6]};
-                        mesh_topology_[count][3] = {0, 2, aRec.node_labels[2], aRec.node_labels[3], aRec.node_labels[6], aRec.node_labels[7]};
-                        mesh_topology_[count][4] = {0, 2, aRec.node_labels[0], aRec.node_labels[3], aRec.node_labels[4], aRec.node_labels[7]};
-                        mesh_topology_[count][5] = {0, 2, aRec.node_labels[4], aRec.node_labels[5], aRec.node_labels[6], aRec.node_labels[7]};
-                    }
-                    break;
-                    case 114: // pyramid of 13 nodes (quadratic) - PIRA13
-                    {
-                        assert(0);
-                        elements_nodes_connection_[count] = {aRec.node_labels[0], aRec.node_labels[6], aRec.node_labels[4], aRec.node_labels[2],
-                                                              aRec.node_labels[7], aRec.node_labels[5], aRec.node_labels[3], aRec.node_labels[1],
-                                                              aRec.node_labels[8], aRec.node_labels[11], aRec.node_labels[10], aRec.node_labels[9], aRec.node_labels[12]};
-                    }
-                    break;
-                    default:
-                        break;
-                    }
-                    count++;
-                }
-                //if (!anElement)
-                //{
-                    //assert(0);
-                    //MESSAGE("TransferUNVWMDataReadMesh::Perform - can not add element with ID = " << aRec.label << " and type = " << aRec.fe_descriptor_id);
-                //}
-            }
-        }
-    }
-    catch (std::exception &e)
-    {
-        std::cerr << "error: " << e.what() << "\n";
-        exit(1);
-    }
-    catch (...)
-    {
-        std::cerr << "Exception of unknown type!\n";
-        mesh_topology_.erase(mesh_topology_.begin());
-    }
+    //                    //            int idxSub = IsTetSubset(curElemNodes, faces[j]);
+    //                    //            if (idxSub == -1)
+    //                    //            {
+    //                    //                mesh_topology_[count][j] = {0, 3, faces[j][0], faces[j][1], faces[j][2]};
+    //                    //            }
+    //                    //            else
+    //                    //            {
+    //                    //                mesh_topology_[count][j] = {i, 2, faces[j][0], faces[j][1], faces[j][2]};
+    //                    //                mesh_topology_[i][idxSub][0] = count;
+    //                    //                mesh_topology_[i][idxSub][1] = 2;
+    //                    //            }
+    //                    //        }
+    //                    //    } 
+    //                    //},
+    //                    //ap);
+    //                }
+    //                break;
+    //                case 118: // Solid Quadratic Tetrahedron - TET10
+    //                {
+    //                    assert(0);
+    //                    elements_nodes_connection_[count] = {aRec.node_labels[0], aRec.node_labels[2], aRec.node_labels[4],
+    //                                                          aRec.node_labels[9],
+    //                                                          aRec.node_labels[1], aRec.node_labels[3], aRec.node_labels[5],
+    //                                                          aRec.node_labels[6], aRec.node_labels[7], aRec.node_labels[8]};
+    //                    mesh_topology_[count][0] = {0, 2, aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[2]};
+    //                    mesh_topology_[count][1] = {0, 2, aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[3]};
+    //                    mesh_topology_[count][2] = {0, 2, aRec.node_labels[1], aRec.node_labels[2], aRec.node_labels[3]};
+    //                    mesh_topology_[count][3] = {0, 2, aRec.node_labels[0], aRec.node_labels[2], aRec.node_labels[3]};
+    //                }
+    //                break;
+    //                case 112: // Solid Linear Prism - PRISM6
+    //                {
+    //                    assert(0);
+    //                    elements_nodes_connection_[count] = {aRec.node_labels[0], aRec.node_labels[2], aRec.node_labels[1],
+    //                                                          aRec.node_labels[3], aRec.node_labels[5], aRec.node_labels[4]};
+    //                    //mesh_topology_[count][0] = {0, 2, aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[2], aRec.node_labels[3]};
+    //                    //mesh_topology_[count][1] = {0, 2, aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[4], aRec.node_labels[5]};
+    //                    //mesh_topology_[count][2] = {0, 2, aRec.node_labels[1], aRec.node_labels[2], aRec.node_labels[5], aRec.node_labels[6]};
+    //                    //mesh_topology_[count][3] = {0, 2, aRec.node_labels[2], aRec.node_labels[3], aRec.node_labels[6], aRec.node_labels[7]};
+    //                    //mesh_topology_[count][4] = {0, 2, aRec.node_labels[0], aRec.node_labels[3], aRec.node_labels[4], aRec.node_labels[7]};
+    //                    //mesh_topology_[count][5] = {0, 2, aRec.node_labels[4], aRec.node_labels[5], aRec.node_labels[6], aRec.node_labels[7]};
+    //                }
+    //                break;
+    //                case 113: // Solid Quadratic Prism - PRISM15
+    //                {
+    //                    assert(0);
+    //                    elements_nodes_connection_[count] = {aRec.node_labels[0], aRec.node_labels[4], aRec.node_labels[2],
+    //                                                          aRec.node_labels[9], aRec.node_labels[13], aRec.node_labels[11],
+    //                                                          aRec.node_labels[5], aRec.node_labels[3], aRec.node_labels[1],
+    //                                                          aRec.node_labels[14], aRec.node_labels[12], aRec.node_labels[10],
+    //                                                          aRec.node_labels[6], aRec.node_labels[8], aRec.node_labels[7]};
+    //                    //mesh_topology_[count] = {};
+    //                }
+    //                break;
+    //                case 115: // Solid Linear Brick - HEX8
+    //                {
+    //                    elements_nodes_connection_[count] = {aRec.node_labels[0], aRec.node_labels[3], aRec.node_labels[2],
+    //                                                          aRec.node_labels[1], aRec.node_labels[4], aRec.node_labels[7],
+    //                                                          aRec.node_labels[6], aRec.node_labels[5]};
+    //                    mesh_topology_[count][0] = {0, 2, aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[2], aRec.node_labels[3]};
+    //                    mesh_topology_[count][1] = {0, 2, aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[4], aRec.node_labels[5]};
+    //                    mesh_topology_[count][2] = {0, 2, aRec.node_labels[1], aRec.node_labels[2], aRec.node_labels[5], aRec.node_labels[6]};
+    //                    mesh_topology_[count][3] = {0, 2, aRec.node_labels[2], aRec.node_labels[3], aRec.node_labels[6], aRec.node_labels[7]};
+    //                    mesh_topology_[count][4] = {0, 2, aRec.node_labels[0], aRec.node_labels[3], aRec.node_labels[4], aRec.node_labels[7]};
+    //                    mesh_topology_[count][5] = {0, 2, aRec.node_labels[4], aRec.node_labels[5], aRec.node_labels[6], aRec.node_labels[7]};
+    //                }
+    //                break;
+    //                case 116: // Solid Quadratic Brick - HEX20
+    //                {
+    //                    elements_nodes_connection_[count] = {aRec.node_labels[0], aRec.node_labels[6], aRec.node_labels[4], aRec.node_labels[2],
+    //                                                          aRec.node_labels[12], aRec.node_labels[18], aRec.node_labels[16], aRec.node_labels[14],
+    //                                                          aRec.node_labels[7], aRec.node_labels[5], aRec.node_labels[3], aRec.node_labels[1],
+    //                                                          aRec.node_labels[19], aRec.node_labels[17], aRec.node_labels[15], aRec.node_labels[13],
+    //                                                          aRec.node_labels[8], aRec.node_labels[11], aRec.node_labels[10], aRec.node_labels[9]};
+    //                    mesh_topology_[count][0] = {0, 2, aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[2], aRec.node_labels[3]};
+    //                    mesh_topology_[count][1] = {0, 2, aRec.node_labels[0], aRec.node_labels[1], aRec.node_labels[4], aRec.node_labels[5]};
+    //                    mesh_topology_[count][2] = {0, 2, aRec.node_labels[1], aRec.node_labels[2], aRec.node_labels[5], aRec.node_labels[6]};
+    //                    mesh_topology_[count][3] = {0, 2, aRec.node_labels[2], aRec.node_labels[3], aRec.node_labels[6], aRec.node_labels[7]};
+    //                    mesh_topology_[count][4] = {0, 2, aRec.node_labels[0], aRec.node_labels[3], aRec.node_labels[4], aRec.node_labels[7]};
+    //                    mesh_topology_[count][5] = {0, 2, aRec.node_labels[4], aRec.node_labels[5], aRec.node_labels[6], aRec.node_labels[7]};
+    //                }
+    //                break;
+    //                case 114: // pyramid of 13 nodes (quadratic) - PIRA13
+    //                {
+    //                    assert(0);
+    //                    elements_nodes_connection_[count] = {aRec.node_labels[0], aRec.node_labels[6], aRec.node_labels[4], aRec.node_labels[2],
+    //                                                          aRec.node_labels[7], aRec.node_labels[5], aRec.node_labels[3], aRec.node_labels[1],
+    //                                                          aRec.node_labels[8], aRec.node_labels[11], aRec.node_labels[10], aRec.node_labels[9], aRec.node_labels[12]};
+    //                }
+    //                break;
+    //                default:
+    //                    break;
+    //                }
+    //                count++;
+    //            }
+    //            //if (!anElement)
+    //            //{
+    //                //assert(0);
+    //                //MESSAGE("TransferUNVWMDataReadMesh::Perform - can not add element with ID = " << aRec.label << " and type = " << aRec.fe_descriptor_id);
+    //            //}
+    //        }
+    //    }
+    //}
+    //catch (std::exception &e)
+    //{
+    //    std::cerr << "error: " << e.what() << "\n";
+    //    exit(1);
+    //}
+    //catch (...)
+    //{
+    //    std::cerr << "Exception of unknown type!\n";
+    //    mesh_topology_.erase(mesh_topology_.begin());
+    //}
 
     return;
 }

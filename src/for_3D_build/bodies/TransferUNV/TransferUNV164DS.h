@@ -62,10 +62,7 @@ namespace unvMesh164
     void set_length_unit(const std::string& s);
   };
   
-  void
-  read_stream(std::ifstream& in_stream, UNVRecordData& theUnitsRecord);
-
-  void write_stream(std::ofstream& out_stream, const UNVRecordData& theDataSet);
+  void read_stream(std::istream& in_stream, UNVRecordData& theUnitsRecord);
   void write_stream(std::ostream& out_stream, const UNVRecordData& theDataSet);
 };
 

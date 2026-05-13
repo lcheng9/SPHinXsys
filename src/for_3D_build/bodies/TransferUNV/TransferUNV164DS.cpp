@@ -11,7 +11,7 @@ using namespace unvMesh164;
 
 static string _label_dataset = "164";
 
-void unvMesh164::read_stream(std::ifstream& in_stream, UNVRecordData& theUnitsRecord )
+void unvMesh164::read_stream(std::istream& in_stream, UNVRecordData& theUnitsRecord )
 {
   if(!in_stream.good())
     EXCEPTION(runtime_error,"Error: bad input UNV file.");
@@ -34,7 +34,7 @@ void unvMesh164::read_stream(std::ifstream& in_stream, UNVRecordData& theUnitsRe
   }
 }
 
-void unvMesh164::write_stream(std::ofstream& out_stream, const UNVRecordData& theDataSet)
+void unvMesh164::write_stream(std::ostream& out_stream, const UNVRecordData& theDataSet)
 {
   if(!out_stream.good())
     EXCEPTION(runtime_error,"Error: bad UNV output file for header data.");
@@ -47,21 +47,6 @@ void unvMesh164::write_stream(std::ofstream& out_stream, const UNVRecordData& th
   out_stream << "    2.7315E+2" << endl;
 
   out_stream << "    -1" << endl;
-}
-
-void unvMesh164::write_stream(std::ostream& out_stream, const UNVRecordData& theDataSet)
-{
-    if (!out_stream.good())
-        EXCEPTION(runtime_error, "Error: bad UNV output file for header data.");
-
-    out_stream << "    -1" << endl;
-    out_stream << "   " << _label_dataset << endl;
-    out_stream <<"         1  SI: Meter          2" << endl;
-    //out_stream << "         " << theDataSet.units_code << "  " << theDataSet.units_description << "          " << theDataSet.temp_mode << endl;
-    out_stream << "    1.0000E+0    1.0000E+0    1.0000E+0" << endl;
-    out_stream << "    2.7315E+2" << endl;
-
-    out_stream << "    -1" << endl;
 }
 
 unvMesh164::UNVRecordData::UNVRecordData()

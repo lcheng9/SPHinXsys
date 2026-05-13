@@ -18,7 +18,7 @@ unvMesh2411::UNVRecordData::UNVRecordData():
   coord[1] = coord[2] = 0.0; // prepare to e.g. 2D mesh
 }
 
-void unvMesh2411::read_stream(std::ifstream& in_stream, TDataSet& theDataSet)
+void unvMesh2411::read_stream(std::istream& in_stream, TDataSet& theDataSet)
 {
   if(!in_stream.good())
     EXCEPTION(runtime_error,"Error: bad input UNV file.");
@@ -28,7 +28,7 @@ void unvMesh2411::read_stream(std::ifstream& in_stream, TDataSet& theDataSet)
    * position
    */
   if(!beginning_of_dataset(in_stream,_label_dataset))
-    EXCEPTION(runtime_error,"-=*Error: cannot find "<<_label_dataset<<" dataset!");
+    EXCEPTION(runtime_error,"Error: cannot find "<<_label_dataset<<" dataset!");
 
   /**
    * always 3 coordinates in the UNV file, no matter
@@ -95,7 +95,7 @@ void unvMesh2411::read_stream(std::ifstream& in_stream, TDataSet& theDataSet)
 }
 
 
-void unvMesh2411::write_stream(std::ofstream& out_stream, const TDataSet& theDataSet)
+void unvMesh2411::write_stream(std::ostream& out_stream, const TDataSet& theDataSet)
 {
   if(!out_stream.good())
     EXCEPTION(runtime_error,"Error: bad UNV output file for node data.");
@@ -131,42 +131,4 @@ void unvMesh2411::write_stream(std::ofstream& out_stream, const TDataSet& theDat
    * Write end of dataset
    */
   out_stream<<"    -1\n";
-}
-
-void unvMesh2411::write_stream(std::ostream& out_stream, const TDataSet& theDataSet)
-{
-    if (!out_stream.good())
-        EXCEPTION(runtime_error, "Error: bad UNV output file for node data.");
-
-    /*
-    * Write beginning of dataset
-    */
-    out_stream << "    -1\n";
-    out_stream << "  " << _label_dataset << "\n";
-
-    TDataSet::const_iterator anIter = theDataSet.begin();
-    for (; anIter != theDataSet.end(); anIter++)
-    {
-        const UNVRecordData& aRec = *anIter;
-        char buf[78];
-        sprintf(buf, "%10d%10d%10d%10d\n",
-            aRec.label,
-            aRec.exp_coord_sys_num,
-            aRec.disp_coord_sys_num,
-            aRec.color);
-        out_stream << buf;
-
-        // the coordinates
-        sprintf(buf, "%25.16E%25.16E%25.16E\n",
-            aRec.coord[0],
-            aRec.coord[1],
-            aRec.coord[2]);
-        out_stream << buf;
-    }
-
-
-    /*
-    * Write end of dataset
-    */
-    out_stream << "    -1\n";
 }

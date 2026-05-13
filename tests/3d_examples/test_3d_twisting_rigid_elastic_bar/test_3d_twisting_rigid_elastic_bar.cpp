@@ -254,7 +254,7 @@ void run_rigid_elastic_coupling(int res_factor)
     ASSERT_DOUBLE_EQ(bbox.first_.x(), min_x_pos);
 
     // System
-    SPHSystem system(bbox, dp);
+    SPHSystem system(bbox, dp, "");
 
     // change output path
     {

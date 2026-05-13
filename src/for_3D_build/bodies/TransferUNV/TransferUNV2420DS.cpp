@@ -11,7 +11,7 @@ using namespace unvMesh2420;
 
 static string _label_dataset = "2420";
 
-void unvMesh2420::read_stream(std::ifstream& in_stream,
+void unvMesh2420::read_stream(std::istream& in_stream,
                    std::string&   part_name, // can re-store a mesh name
                    TDataSet&      theDataSet)
 {
@@ -58,7 +58,7 @@ void unvMesh2420::read_stream(std::ifstream& in_stream,
 }
 
 
-void unvMesh2420::write_stream(std::ofstream&     out_stream,
+void unvMesh2420::write_stream(std::ostream&     out_stream,
                     const std::string& part_name)
 //                    const TDataSet& theDataSet)
 {
@@ -82,31 +82,6 @@ void unvMesh2420::write_stream(std::ofstream&     out_stream,
   out_stream<<"    0.0000E+0    0.0000E+0    0.0000E+0" << endl;
 
   out_stream<<"    -1"  << endl;
-}
-
-
-void unvMesh2420::write_stream(std::ostream& out_stream, const std::string& part_name)
-{
-    if (!out_stream.good())
-        EXCEPTION(runtime_error, "Error: bad UNV output file.");
-
-    out_stream << "    -1" << endl;
-    out_stream << "  " << _label_dataset << endl;
-
-    out_stream << "         1" << endl; // R1: Part UID
-    if (part_name.empty())
-        out_stream << "Welsim_Mesh" << endl; // R2: Part Name
-    else
-        out_stream << part_name << endl;
-    out_stream << "         1         0         0" << endl; // R3: Label, Type, Color
-
-    out_stream << "Global coordinate system" << endl; // R4: Name
-    out_stream << "    1.0000E+0    0.0000E+0    0.0000E+0" << endl;
-    out_stream << "    0.0000E+0    1.0000E+0    0.0000E+0" << endl;
-    out_stream << "    0.0000E+0    0.0000E+0    1.0000E+0" << endl;
-    out_stream << "    0.0000E+0    0.0000E+0    0.0000E+0" << endl;
-
-    out_stream << "    -1" << endl;
 }
 
 bool unvMesh2420::UNVRecordData::is_identity_tensor() const

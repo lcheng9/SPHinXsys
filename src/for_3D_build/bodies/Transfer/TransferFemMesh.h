@@ -9,10 +9,10 @@
 #include <vector>
 //#include <QString>
 
-#include "../MeshDB_PreCompiled.h"
+//#include "../MeshDB_PreCompiled.h"
 
 
-class MESHTRANSFER_EXPORT TransferFemMesh
+class TransferFemMesh
 {
  public:
   TransferFemMesh();

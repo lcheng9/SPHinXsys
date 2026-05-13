@@ -19,10 +19,9 @@ namespace unvMesh2417{
   typedef int TGroupId; // type of element label
   typedef std::map<TGroupId, UNVRecordData> TDataSet;
 
-  void read_stream(std::ifstream& in_stream, TDataSet& theDataSet);
-  void read_stream_group(const std::string& myGroupLabel, std::ifstream& in_stream, TDataSet& theDataSet);
+  void read_stream(std::istream& in_stream, TDataSet& theDataSet);
+  void read_stream_group(const std::string& myGroupLabel, std::istream& in_stream, TDataSet& theDataSet);
 
-  void write_stream(std::ofstream& out_stream, const TDataSet& theDataSet);
   void write_stream(std::ostream& out_stream, const TDataSet& theDataSet);
 };
 

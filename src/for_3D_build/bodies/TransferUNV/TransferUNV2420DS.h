@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _TransferUNV2420_DS_H_
+#define _TransferUNV2420_DS_H_
 
 
 // Name:   Coordinate Systems
@@ -81,13 +82,11 @@ namespace unvMesh2420
   
   typedef std::vector<UNVRecordData> TDataSet;
 
-  void
-  read_stream(std::ifstream& in_stream,
-       std::string&   part_name, // can re-store a mesh name
-       TDataSet&      theDataSet);
+  void read_stream(std::istream& in_stream, std::string& part_name, TDataSet& theDataSet);
 
-  void write_stream(std::ofstream& out_stream, const std::string& part_name); // can store a mesh name
   void write_stream(std::ostream&  out_stream, const std::string& part_name); // can store a mesh name
 
 };
 
+
+#endif
